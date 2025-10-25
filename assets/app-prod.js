@@ -3,9 +3,9 @@
     var currentHost = window.location.hostname;
     var currentPort = window.location.port;
 
-    var APP_URL = "http://" + currentHost + ":" + (currentPort || "8090");  
+    var APP_URL = "https://youtomb2016.github.io";  
     var APP_HOST =  currentHost;  
-    var PROXY_URL = "http://" + currentHost + ":8070"; 
+    var PROXY_URL = "https://corsproxy.io/?"; 
 
     console.log("APP_URL:", APP_URL);
     console.log("PROXY_URL:", PROXY_URL);
@@ -3931,7 +3931,7 @@
             this.W = u;
             this.I = !!w;
             this.title = "";
-            this.Px = this.Ja.ia("[[No videos are available [test] |The message shown when a row has no videos to show.]]");
+            this.Px = this.Ja.ia("[[No videos are available|The message shown when a row has no videos to show.]]");
             this.list = null;
             this.g = new N;
 
@@ -15741,7 +15741,7 @@
             return this.f.br ? "in_t" : this.f.Xi ? "in_g" : this.f.$q ? "in_vi" : this.f.Zi ? "in_r" : this.f.dm ? "" : "in_v1"
         };
         d.Un = function () {
-            return this.f.dm ? "https://" + this.f.dm : this.f.AB ? "/youtubei/v1" : this.f.br ? "http://www-googleapis-test.sandbox.google.com/youtubei/vi" : this.f.Xi ? "https://staging-youtubei.sandbox.googleapis.com/v1" : this.f.$q ? this.f.Yi ? "https://youtubei.googleapis.com/youtubei/vi" : "https://www.googleapis.com/youtubei/vi" : this.f.Zi ? "https://web.archive.org/web/20160228021433/https://www-googleapis-staging.sandbox.google.com/youtubei/v1release" : this.f.Yi ? APP_URL + "/api" : APP_URL + "/api"
+            return this.f.dm ? "https://" + this.f.dm : this.f.AB ? "/youtubei/v1" : this.f.br ? "https://corsproxy.io/?https://www-googleapis-test.sandbox.google.com/youtubei/vi" : this.f.Xi ? "https://staging-youtubei.sandbox.googleapis.com/v1" : this.f.$q ? this.f.Yi ? "https://youtubei.googleapis.com/youtubei/vi" : "https://www.googleapis.com/youtubei/vi" : this.f.Zi ? "https:https://www-googleapis-staging.sandbox.google.com/youtubei/v1release" : this.f.Yi ? APP_URL + "/api" : APP_URL + "/api"
         };
         d.fk = function (a) {
             a = a || {};
@@ -20398,7 +20398,7 @@
                 method: "POST"
             };
             e.wc || (e.wc = {});
-            lq("//web.archive.org/web/20160228021433/http://www.youtube.com/ad_data_204", e)
+            lq("https://corsproxy.io/?https://www.youtube.com/ad_data_204", e)
         };
 
         function yq(a, b, c) {
@@ -21575,11 +21575,11 @@
         C(Rq, Qq);
         d = Rq.prototype;
         d.vx = function (a) {
-            this.l.yf && (this.i ? a() : (this.g.push(a), 1 < this.g.length || (this.l.P ? n("cast.receiver") ? this.Tx() : this.j("https://web.archive.org/web/20160228021433/https://www.gstatic.com/cast/sdk/libs/receiver/2.0.0/cast_receiver.js", {
+            this.l.yf && (this.i ? a() : (this.g.push(a), 1 < this.g.length || (this.l.P ? n("cast.receiver") ? this.Tx() : this.j("https:https://www.gstatic.com/cast/sdk/libs/receiver/2.0.0/cast_receiver.js", {
                 timeout: 3E4
             }).Yd(x(this.Tx, this)).yh(function () {
                 console.log("Failed to load cast v2 SDK")
-            }) : this.j("https://web.archive.org/web/20160228021433/https://www.gstatic.com/cast/js/receiver/1.0/cast_receiver.js", {
+            }) : this.j("https:https://www.gstatic.com/cast/js/receiver/1.0/cast_receiver.js", {
                 timeout: 3E4
             }).Yd(x(this.jQ, this)).yh(function () {
                 console.log("Failed to load cast SDK")
@@ -23147,7 +23147,7 @@
             this.l = a
         };
         d.Xl = function () {
-            this.h.oX() && (this.l ? this.h.NB('<additionalData xmlns="https://web.archive.org/web/20160228021433/http://www.youtube.com/dial"><screenId>' + this.l + "</screenId></additionalData>") : this.h.NB(""))
+            this.h.oX() && (this.l ? this.h.NB('<additionalData xmlns="https:https://corsproxy.io/?https://www.youtube.com/dial"><screenId>' + this.l + "</screenId></additionalData>") : this.h.NB(""))
         };
         d.mQ = function (a) {
             this.$g(a.target, {
@@ -24458,7 +24458,7 @@
         }
         C(Jr, Kq);
         var Kr = {
-            "X-STS-RelyingPartyId": "https://web.archive.org/web/20160228021433/https://www.youtube.com/"
+            "X-STS-RelyingPartyId": "https:https://www.youtube.com/"
         };
         d = Jr.prototype;
         d.Ai = function (a) {
@@ -32710,11 +32710,11 @@
             return !0
         };
         d.DS = function () {
-            this.Cg("https://web.archive.org/web/20160228021433/http://www.youtube.com/tv");
+            this.Cg("https:https://corsproxy.io/?https://www.youtube.com/tv");
             return !0
         };
         d.ZO = function () {
-            this.Cg("https://web.archive.org/web/20160228021433/https://kcdsfrdvcs.appspot.com");
+            this.Cg("https:https://kcdsfrdvcs.appspot.com");
             return !0
         };
         d.vM = function (a) {
@@ -33258,7 +33258,7 @@
             }
         };
         d.HH = function (a) {
-            return '<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE grammar PUBLIC "-//W3C//DTD GRAMMAR 1.0//EN" "http://www.w3.org/TR/speech-grammar/grammar.dtd"><grammar xml:lang="' + this.Ua.g + '" xmlns="http://www.w3.org/2001/06/grammar" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/06/grammar http://www.w3.org/TR/speech-grammar/grammar.xsd" version="1.0">' + a.join("") + "</grammar>"
+            return '<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE grammar PUBLIC "-//W3C//DTD GRAMMAR 1.0//EN" "https://corsproxy.io/?https://www.w3.org/TR/speech-grammar/grammar.dtd"><grammar xml:lang="' + this.Ua.g + '" xmlns="https://corsproxy.io/?https://www.w3.org/2001/06/grammar" xmlns:xsi="https://corsproxy.io/?https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://corsproxy.io/?https://www.w3.org/2001/06/grammar https://corsproxy.io/?https://www.w3.org/TR/speech-grammar/grammar.xsd" version="1.0">' + a.join("") + "</grammar>"
         };
         d.OH = function (a, b, c, e) {
             return '<rule id="' + a + '"><action>' + sa(b) + "</action><phrase>" + sa(c) + "</phrase>" + ("" !== e ? "<pronunciation>" + sa(e) + "</pronunciation>" : "") + "</rule>"
@@ -33356,7 +33356,7 @@
             var c = this.j.hj(),
                 e = '<?xml version="1.0" encoding="UTF-8"?><service xmlns="urn:dial-multiscreen-org:schemas:dial"><name>YouTube</name><options allowStop="false" /><state>' + (null != c || this.i ? "running" : "stopped") + "</state>";
             this.i && (e += '<link rel="run" href="' + this.Jv(a) + '" />');
-            null == c || this.h.ac || (e += '<additionalData xmlns="https://web.archive.org/web/20160228021433/http://www.youtube.com/dial"><screenId>' + c + "</screenId></additionalData>");
+            null == c || this.h.ac || (e += '<additionalData xmlns="https:https://corsproxy.io/?https://www.youtube.com/dial"><screenId>' + c + "</screenId></additionalData>");
             b.mimeType = 'text/xml; charset="utf-8"';
             b.responseCode = 200;
             b.body = e + "</service>";
