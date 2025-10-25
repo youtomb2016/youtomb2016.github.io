@@ -1820,7 +1820,7 @@ p {
 }
 
 .pairing .cast-icon {
-  background: url(/web/20160228021433im_/http://www.youtube.com/s/tv/html5/c96c1c11/img/cast_disconnected_blue.png) no-repeat center;
+  background: url(/assets/cast_disconnected_blue.png) no-repeat center;
   background-size: contain;
   display: inline-block;
   height: 1em;
@@ -2102,7 +2102,7 @@ p {
 }
 
 #search .search-pairing .search-img {
-  background-image: url(/web/20160228021433im_/http://www.youtube.com/s/tv/html5/c96c1c11/img/pair_promo.png);
+  background-image: url(/assets/pair_promo.png);
   background-size: cover;
   display: inline-block;
   height: 11em;
@@ -4645,7 +4645,7 @@ p {
 }
 
 .toaster .toast-icon {
-  background-image: url(/web/20160228021433im_/http://www.youtube.com/s/tv/html5/c96c1c11/img/dial-sprite.png);
+  background-image: url(/assets/dial-sprite.png);
   background-size: 100%;
   max-width: 100%
 }
@@ -4715,19 +4715,19 @@ p {
 }
 
 .toaster .volume-muted {
-  background-image: url(/web/20160228021433im_/http://www.youtube.com/s/tv/html5/c96c1c11/img/volume_mute_pressed.png)
+  background-image: url(/assets/volume_mute_pressed.png)
 }
 
 .toaster .volume-low {
-  background-image: url(/web/20160228021433im_/http://www.youtube.com/s/tv/html5/c96c1c11/img/volume_0_pressed.png)
+  background-image: url(/assets/volume_0_pressed.png)
 }
 
 .toaster .volume-mid {
-  background-image: url(/web/20160228021433im_/http://www.youtube.com/s/tv/html5/c96c1c11/img/volume_1_pressed.png)
+  background-image: url(/assets/volume_1_pressed.png)
 }
 
 .toaster .volume-high {
-  background-image: url(/web/20160228021433im_/http://www.youtube.com/s/tv/html5/c96c1c11/img/volume_2_pressed.png)
+  background-image: url(/assets/volume_2_pressed.png)
 }
 
 .toaster .volume-toast .toast-msg {
@@ -4997,11 +4997,11 @@ p {
 }
 
 #dialog.help .dialog-icon {
-  background-image: url(/web/20160228021433im_/http://www.youtube.com/s/tv/html5/c96c1c11/img/icon-help.png)
+  background-image: url(/assets/icon-help.png)
 }
 
 #dialog.feedback .dialog-icon {
-  background-image: url(/web/20160228021433im_/http://www.youtube.com/s/tv/html5/c96c1c11/img/icon-feedback.png)
+  background-image: url(/assets/icon-feedback.png)
 }
 
 #dialog.system-error .dialog-icon {
@@ -5447,7 +5447,7 @@ p {
 }
 
 .flag-example {
-  background: url(/web/20160228021433im_/http://www.youtube.com/s/tv/html5/c96c1c11/img/report.png) no-repeat 0 0;
+  background: url(/assets/report.png) no-repeat 0 0;
   background-size: contain;
   display: inline-block;
   height: 57%;
@@ -5532,7 +5532,7 @@ p {
 }
 
 .status-dialog .icon {
-  background: url(/web/20160228021433im_/http://www.youtube.com/s/tv/html5/c96c1c11/img/pairing-promo-combo.png) center center no-repeat;
+  background: url(/assets/pairing-promo-combo.png) center center no-repeat;
   background-size: contain;
   display: inline-block;
   height: 11em;
@@ -5912,11 +5912,11 @@ p {
 }
 
 .privacy-button.checked .checkbox {
-  background-image: url(/web/20160228021433im_/http://www.youtube.com/s/tv/html5/c96c1c11/img/icon-privacy-check-light.png)
+  background-image: url(/assets/icon-privacy-check-light.png)
 }
 
 .privacy-button.focused.checked .checkbox {
-  background-image: url(/web/20160228021433im_/http://www.youtube.com/s/tv/html5/c96c1c11/img/icon-privacy-check-dark.png)
+  background-image: url(/assets/icon-privacy-check-dark.png)
 }
 
 .privacy-button .label .name {
@@ -5940,29 +5940,29 @@ p {
 
 .private-state,
 .video-tile .private {
-  background-image: url(/web/20160228021433im_/http://www.youtube.com/s/tv/html5/c96c1c11/img/icon-privacy-private-light.png)
+  background-image: url(/assets/icon-privacy-private-light.png)
 }
 
 .private-state.focused {
-  background-image: url(/web/20160228021433im_/http://www.youtube.com/s/tv/html5/c96c1c11/img/icon-privacy-private-dark.png)
+  background-image: url(/assets/icon-privacy-private-dark.png)
 }
 
 .public-state,
 .video-tile .public {
-  background-image: url(/web/20160228021433im_/http://www.youtube.com/s/tv/html5/c96c1c11/img/icon-privacy-public-light.png)
+  background-image: url(/assets/icon-privacy-public-light.png)
 }
 
 .public-state.focused {
-  background-image: url(/web/20160228021433im_/http://www.youtube.com/s/tv/html5/c96c1c11/img/icon-privacy-public-dark.png)
+  background-image: url(/assets/icon-privacy-public-dark.png)
 }
 
 .unlisted-state,
 .video-tile .unlisted {
-  background-image: url(/web/20160228021433im_/http://www.youtube.com/s/tv/html5/c96c1c11/img/icon-privacy-unlisted-light.png)
+  background-image: url(/assets/icon-privacy-unlisted-light.png)
 }
 
 .unlisted-state.focused {
-  background-image: url(/web/20160228021433im_/http://www.youtube.com/s/tv/html5/c96c1c11/img/icon-privacy-unlisted-dark.png)
+  background-image: url(/assets/icon-privacy-unlisted-dark.png)
 }
 
 .video-tile .private,
@@ -6610,20 +6610,20 @@ p {
 
 
 .game-console.sony .legend-item .icon {
-  background-image: url(/web/20160228021433im_/http://www.youtube.com/s/tv/html5/c96c1c11/img/legend-sprite-ps3.png)
+  background-image: url(/assets/legend-sprite-ps3.png)
 }
 
 .roku #legend .legend-item .icon {
-  background-image: url(/web/20160228021433im_/http://www.youtube.com/s/tv/html5/c96c1c11/img/legend-sprite-roku.png)
+  background-image: url(/assets/legend-sprite-roku.png)
 }
 
 .skip-ad-callout .icon,
 .tv .legend-item .icon {
-  background-image: url(/web/20160228021433im_/http://www.youtube.com/s/tv/html5/c96c1c11/img/legend-sprite-tv.png)
+  background-image: url(/assets/legend-sprite-tv.png)
 }
 
 .wiiu .legend-item .icon {
-  background-image: url(/web/20160228021433im_/http://www.youtube.com/s/tv/html5/c96c1c11/img/legend-sprite-wiiu.png)
+  background-image: url(/assets/legend-sprite-wiiu.png)
 }
 
 .wiiu #user-info-background {
@@ -6641,11 +6641,11 @@ p {
 }
 
 .xboxone .legend-item .icon {
-  background-image: url(/web/20160228021433im_/http://www.youtube.com/s/tv/html5/c96c1c11/img/legend-sprite-xboxone.png)
+  background-image: url(/assets/legend-sprite-xboxone.png)
 }
 
 .xbox360 .legend-item .icon {
-  background-image: url(/web/20160228021433im_/http://www.youtube.com/s/tv/html5/c96c1c11/img/legend-sprite-xbox360.png)
+  background-image: url(/assets/legend-sprite-xbox360.png)
 }
 
 .xbox360 #dialog .login-user-icon {
@@ -6975,7 +6975,7 @@ body.limited-memory {
 }
 
 .limited-animation .hide-background.video-tile .video-thumb {
-  background-image: url(/web/20160228021433im_/http://www.youtube.com/s/tv/html5/c96c1c11/img/icon-playbutton.png) !important;
+  background-image: url(/assets/icon-playbutton.png) !important;
   background-repeat: no-repeat;
   opacity: 1
 }
@@ -7107,13 +7107,13 @@ body.limited-memory {
 }
 
 .eureka #watch.play #eureka-player-controls {
-  background-image: url(/web/20160228021433im_/http://www.youtube.com/s/tv/html5/c96c1c11/img/player-play.png);
+  background-image: url(/assets/player-play.png);
   -webkit-animation: hideAndGrowPlay linear 0.25s 0s 1 normal none;
   animation: hideAndGrowPlay linear 0.25s 0s 1 normal none
 }
 
 .eureka #watch.pause #eureka-player-controls {
-  background-image: url(/web/20160228021433im_/http://www.youtube.com/s/tv/html5/c96c1c11/img/player-pause.png);
+  background-image: url(/assets/player-pause.png);
   -webkit-animation: showAndShrinkPause linear 0.25s 0s 1 normal none;
   animation: showAndShrinkPause linear 0.25s 0s 1 normal none;
   opacity: .7
@@ -7710,30 +7710,30 @@ h3.call-to-cast-text {
 
 .snap-controls .icon-mute,
 .snap-controls .icon-mute.disabled {
-  background-image: url(/web/20160228021433im_/http://www.youtube.com/s/tv/html5/c96c1c11/img/button-unmute-active.png)
+  background-image: url(/assets/button-unmute-active.png)
 }
 
 .snap-controls .icon-mute.focused,
 .snap-controls .icon-mute:hover:not(.disabled) {
-  background-image: url(/web/20160228021433im_/http://www.youtube.com/s/tv/html5/c96c1c11/img/button-unmute-onhover-active.png)
+  background-image: url(/assets/button-unmute-onhover-active.png)
 }
 
   .snap-controls .icon-mute.toggle-selected {
-  background-image: url(/web/20160228021433im_/http://www.youtube.com/s/tv/html5/c96c1c11/img/button-mute-active.png)
+  background-image: url(/assets/button-mute-active.png)
 }
 
 .snap-controls .icon-mute.toggle-selected.focused,
 .snap-controls .icon-mute.toggle-selected:hover {
-  background-image: url(/web/20160228021433im_/http://www.youtube.com/s/tv/html5/c96c1c11/img/button-mute-onhover-active.png)
+  background-image: url(/assets/button-mute-onhover-active.png)
 }
 
 .snap-controls .icon-fullscreen {
-  background-image: url(/web/20160228021433im_/http://www.youtube.com/s/tv/html5/c96c1c11/img/button-fullscreen-active.png)
+  background-image: url(/assets/button-fullscreen-active.png)
 }
 
 .snap-controls .icon-fullscreen.focused,
 .snap-controls .icon-fullscreen:hover {
-  background-image: url(/web/20160228021433im_/http://www.youtube.com/s/tv/html5/c96c1c11/img/button-fullscreen-onhover-active.png)
+  background-image: url(/assets/button-fullscreen-onhover-active.png)
 }
 
 .up-next {
@@ -9182,7 +9182,7 @@ h3.call-to-cast-text {
 }
 
 .pointer-overlay .nav-arrow {
-  background-image: url(/web/20160228021433im_/http://www.youtube.com/s/tv/html5/c96c1c11/img/motion-control-sprite.png);
+  background-image: url(/assets/motion-control-sprite.png);
   background-repeat: no-repeat;
   background-size: 100%;
   cursor: pointer;
