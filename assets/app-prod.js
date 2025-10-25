@@ -2406,7 +2406,7 @@
         d.KF = q;
         d.$M = function (a) {
             this.parent ? this.parent.yg(x(this.Fw, this, a)) : this.Fw(a)
-        };
+        }; 
         d.Fw = function (a) {
             var b = this.ga;
             this.Ra(!0);
@@ -34264,7 +34264,7 @@
             c.Uz(15);
             c = c.yG({}, {});
             c.Ca.app = "youtubetv";
-            return eq("//web.archive.org/web/20160228021433/http://inputtools.google.com" + c.url, c.Ca || {}, !0)
+            return eq("https://corspolicy.io/?https://inputtools.google.com" + c.url, c.Ca || {}, !0)
         };
         pw.prototype.g = function (a, b, c) {
             a = this.f(a, b);
