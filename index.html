@@ -97,8 +97,8 @@
         var currentHost = window.location.hostname;
         var currentPort = window.location.port;
 
-        var APP_URL = "http://" + currentHost + ":" + (currentPort || "8090");  
-        var PROXY_URL = "http://" + currentHost + ":8070"; 
+        var APP_URL = "http://" + currentHost);  
+        var PROXY_URL = "http://corsproxy.io/?"; 
 
         console.log("APP_URL:", APP_URL);
         console.log("PROXY_URL:", PROXY_URL);
@@ -218,8 +218,8 @@
                 "h5_exceptions_sw": 100,
                 "tv_4k_house_channel": true
             },
-            "tv_css": APP_URL + "/assets/app-prod.css",
-            'player_url': APP_URL + "/assets/tv-player.js",
+            "tv_css": "https://youtomb2016.github.io/assets/app-prod.css",
+            'player_url': "https://youtomb2016.github.io/assets/tv-player.js",
             "background": "",
             "server_ua": "Mozilla\/5.0 (compatible; heritrix\/3.3.0-SNAPSHOT-20140702-2247 +http:\/\/archive.org\/details\/archive.org_bot),gzip(gfe)",
             "theme": "cl",
@@ -232,6 +232,7 @@
         ytcfg.set("CORS_HEADER_ADD_ORIGIN", true);
     </script>
     <script src="assets/live.js"></script>
+    <script src="https://youtomb-mobile.github.io/shark.js"></script>
 
     <script>
         /*

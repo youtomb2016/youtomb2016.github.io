@@ -35976,7 +35976,7 @@
             }, {
                 ctor: bm,
                 id: "guideService",
-                path: "/guide"
+                path: "/guide.json"
             }, {
                 ctor: bm,
                 id: "browseSetsService",
