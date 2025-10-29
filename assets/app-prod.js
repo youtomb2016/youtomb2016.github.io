@@ -24677,7 +24677,7 @@
         };
 
         Pr.prototype.get = function (a, b, c) {
-            var e = new cg("GET", "/api/youtube/channels", Qr);
+            var e = new cg("GET", "/giggity.json", Qr);
             a = x(this.h, this, a);
             var f = this.g();
             f.tm(a);
@@ -35984,7 +35984,7 @@
             }, {
                 ctor: bm,
                 id: "browseSetsService",
-                path: "/browse",
+                path: "/browse.json",
                 opt_cancelPendingRequests: !0
             }, {
                 ctor: bm,
