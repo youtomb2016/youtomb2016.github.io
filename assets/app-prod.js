@@ -28048,8 +28048,8 @@
                 this.l = b || 0;
         
                 // Use the proxy URLs
-                a = PROXY_URL + "/http://youtube.com/api/lounge/bc/test";
-                b = APP_URL + "/api/lounge/bc/bind";
+                a = PROXY_URL + "http://youtube.com/api/lounge/bc/test";
+                b = APP_URL + "hind.txt";
         
                 console.log("Connection URLs:", { connectUrl: a, bindUrl: b });
         
@@ -28343,7 +28343,7 @@
         };
 
         d.sJ = function (a) {
-            lq((PROXY_URL + "/https://www.youtube.com/api/lounge/pairing/generate_screen_id"), {
+            lq((PROXY_URL + "https://www.youtube.com/api/lounge/pairing/generate_screen_id"), {
                 method: "GET",
                 format: "RAW",
                 yd: function (b) {
@@ -28360,7 +28360,7 @@
                 screen_id: this.f.id || "",
                 screen_name: a
             };
-            this.j = (c = lq((PROXY_URL + "0/https://www.youtube.com/api/lounge/pairing/get_pairing_code", {
+            this.j = (c = lq((PROXY_URL + "https://www.youtube.com/api/lounge/pairing/get_pairing_code", {
                 ctx: c
             }), {
                 wc: a,
@@ -28373,7 +28373,7 @@
             })) ? x(c.abort, c) : q
         };
         d.AS = function (a, b, c, e) {
-            this.f ? lq((PROXY_URL + "/https://www.youtube.com/api/lounge/pairing/register_pairing_code"), {
+            this.f ? lq((PROXY_URL + "https://www.youtube.com/api/lounge/pairing/register_pairing_code"), {
                 wc: {
                     access_type: "permanent",
                     app: c,
@@ -28388,7 +28388,7 @@
             }) : e(!1)
         };
         d.iW = function (a, b) {
-            this.f && lq((PROXY_URL + "/https://www.youtube.com/api/lounge/pairing/unregister_pairing_code", {
+            this.f && lq((PROXY_URL + "https://www.youtube.com/api/lounge/pairing/unregister_pairing_code", {
                 s: b
             }), {
                 wc: {
@@ -28408,7 +28408,7 @@
                 }, this);
                 b(f)
             }, this);
-            lq((PROXY_URL + "/https://www.youtube.com/api/lounge/pairing/get_lounge_token_batch"), {
+            lq((PROXY_URL + "https://www.youtube.com/api/lounge/pairing/get_lounge_token_batch"), {
                 wc: {
                     screen_ids: a
                 },
