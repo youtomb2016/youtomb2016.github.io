@@ -15741,7 +15741,7 @@
             return this.f.br ? "in_t" : this.f.Xi ? "in_g" : this.f.$q ? "in_vi" : this.f.Zi ? "in_r" : this.f.dm ? "" : "in_v1"
         };
         d.Un = function () {
-            return this.f.dm ? "https://" + this.f.dm : this.f.AB ? "/youtubei/v1" : this.f.br ? "https://corsproxy.io/?https://www-googleapis-test.sandbox.google.com/youtubei/vi" : this.f.Xi ? "https://staging-youtubei.sandbox.googleapis.com/v1" : this.f.$q ? this.f.Yi ? "https://youtubei.googleapis.com/youtubei/vi" : "https://www.googleapis.com/youtubei/vi" : this.f.Zi ? "https:https://www-googleapis-staging.sandbox.google.com/youtubei/v1release" : this.f.Yi ? APP_URL + "/api" : APP_URL + "/api"
+            return this.f.dm ? "https://" + this.f.dm : this.f.AB ? "/youtubei/v1" : this.f.br ? "https://corsproxy.io/?https://www-googleapis-test.sandbox.google.com/youtubei/vi" : this.f.Xi ? "https://staging-youtubei.sandbox.googleapis.com/v1" : this.f.$q ? this.f.Yi ? "https://youtubei.googleapis.com/youtubei/vi" : "https://www.googleapis.com/youtubei/vi" : this.f.Zi ? "https:https://www-googleapis-staging.sandbox.google.com/youtubei/v1release" : this.f.Yi ? APP_URL : APP_URL
         };
         d.fk = function (a) {
             a = a || {};
@@ -20945,7 +20945,7 @@
             this.fn();
             var e = {
                 client_id: this.Zj(),
-                scope: "http://gdata.youtube.com https://www.googleapis.com/auth/youtube-paid-content"
+                scope: "https://gdata.youtube.com https://www.googleapis.com/auth/youtube-paid-content"
             },
                 f = x(function (a) {
                     b(!!a);
@@ -20981,7 +20981,7 @@
                 client_id: this.Zj(),
                 client_secret: this.Wn(),
                 device_code: a,
-                grant_type: "http://oauth.net/grant_type/device/1.0"
+                grant_type: "https://oauth.net/grant_type/device/1.0"
             },
                 e = new cg("POST", "/o/oauth2/token", null, e),
                 f = this.B();
@@ -25617,7 +25617,7 @@
             return this.mD(a, "vi", c)
         };
         d.mD = function (a, b, c) {
-            return "http://i1.ytimg.com/" + b + "/" + a + "/" + c + ".jpg"
+            return "https://i1.ytimg.com/" + b + "/" + a + "/" + c + ".jpg"
         };
         d.KV = function (a) {
             return 24 == a.length ? a.substr(2) : a
@@ -33047,7 +33047,7 @@
 
         function Nv() { }
         Nv.prototype.f = function (a) {
-            return APP_URL + "/api/chart?cht=qr&chs=350x350&chl=" + (a)
+            return APP_URL + "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + (a)
         };
 
         function Ov(a, b, c, e, f, g, k, l, p, r, u, w, A, G, T, W, Y, ma, va, eb, fb, Lb) {
@@ -33384,7 +33384,7 @@
             return !0
         };
         d.Jv = function (a) {
-            return "http://" + a.host + a.path + "/run"
+            return "https://" + a.host + a.path + "/run"
         };
         Sv.inject = "location environment remoteService dialApi experimentFlags showVerticalRejectionToast clientInfo".split(" ");
 
