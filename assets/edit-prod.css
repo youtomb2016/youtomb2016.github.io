@@ -1289,7 +1289,7 @@ p {
 .channel-tile .video-thumb.preloaded {
   background: no-repeat center;
   background-color: #252525;
-  background-image: url('/web/20160228021433im_/http://www.youtube.com/s/tv/html5/c96c1c11/img/icon-playbutton.png');
+  background-image: url('/assets/icon-playbutton.png');
   background-size: auto
 }
 
@@ -5810,19 +5810,19 @@ p {
 }
 
 .modify-video .modify-edit-button {
-  background-image: url('/web/20160228021433im_/http://www.youtube.com/s/tv/html5/c96c1c11/img/edit_tile_light.png')
+  background-image: url('/assets/edit_tile_light.png')
 }
 
 .modify-video .modify-edit-button.focused {
-  background-image: url('/web/20160228021433im_/http://www.youtube.com/s/tv/html5/c96c1c11/img/edit_tile_dark.png')
+  background-image: url('/assets/edit_tile_dark.png')
 }
 
 .modify-video .modify-delete-button {
-  background-image: url('/web/20160228021433im_/http://www.youtube.com/s/tv/html5/c96c1c11/img/trash_tile_light.png')
+  background-image: url('/assets/trash_tile_light.png')
 }
 
 .modify-video .modify-delete-button.focused {
-  background-image: url('/web/20160228021433im_/http://www.youtube.com/s/tv/html5/c96c1c11/img/trash_tile_dark.png')
+  background-image: url('/assets/trash_tile_dark.png')
 }
 
 .delete-video-dialog .video-tile .details,
@@ -6419,7 +6419,7 @@ p {
 }
 
 .engagement-indicator .stop-listening .icon {
-  background-image: url('/web/20160228021433im_/http://www.youtube.com/s/tv/html5/c96c1c11/img/icon-xboxone-engaged.png')
+  background-image: url('/assets/icon-xboxone-engaged.png')
 }
 
 .engagement-indicator .text {
@@ -7769,7 +7769,7 @@ h3.call-to-cast-text {
 .up-next .video-thumb.preloaded {
   background: no-repeat center;
   background-color: #252525;
-  background-image: url('/web/20160228021433im_/http://www.youtube.com/s/tv/html5/c96c1c11/img/icon-playbutton.png');
+  background-image: url('/assets/icon-playbutton.png');
   background-size: auto
 }
 
@@ -7844,13 +7844,13 @@ h3.call-to-cast-text {
 }
 
 .youtube-logo:before {
-  color: rgba(153, 153, 153, .5);
+  color: rgba(0, 0, 0, 1);
   display: block;
   font-size: 3.4em
 }
 
 .youtube-unlimited-logo:before {
-  color: rgba(153, 153, 153, .5);
+  color: rgba(0, 0, 0, 1);
   display: none;
   font-size: 3.4em
 }

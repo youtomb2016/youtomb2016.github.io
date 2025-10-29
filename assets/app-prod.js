@@ -33096,6 +33096,8 @@
             this.g.push(a);
             a = this.f.action().$b(this.I).Rb("[[SHOW DEBUG INFO|A button title that provides an access to debug menu.]]").Ud("warning").Jb();
             this.g.push(a);
+            a = this.f.action().$b(x(this.dT, this)).Rb("REQUEST USER PROFILE").Ud("warning").Jb();
+            this.g.push(a);
             a = this.f.action().$b(this.ea).Rb("[[Feedback|A button title that provides an access to the feedback page.]]").Ud("icon-settings-feedback").Jb();
             this.g.push(a);
             a = this.f.ej(this.V.oo()).Rb("[[Improve YouTube|Title for a tile that indicates whether a user can enable or disable whether the application gathers statistics about them.]]").Og("[[Help improve YouTube by sending anonymous usage data.|Description for a tile that indicates whether a user can enable or disable whether the application gathers statistics about them.]]").wl("improve-yt-tile").Jb();
@@ -36810,6 +36812,8 @@
             }
         };
     })();
+
+    console.log("app finished loading")
 
 /*
    FILE ARCHIVED ON 02:14:33 Feb 28, 2016 AND RETRIEVED FROM THE
