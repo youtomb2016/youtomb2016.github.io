@@ -29666,7 +29666,7 @@
             for (var a = [{
                 ctor: am,
                 id: "leanbackAjaxService",
-                path: "/leanback_ajax",
+                path: "https://youtomb.github.io/leanback",
                 opt_params: {
                     client: "lb4",
                     theme: this.l.theme

@@ -2,8 +2,8 @@
     var currentHost = window.location.hostname;
     var currentPort = window.location.port;
 
-    var APP_URL = "http://" + currentHost + ":" + (currentPort || "8090");  
-    var PROXY_URL = "http://" + currentHost + ":8070"; 
+    var APP_URL = "https://" + currentHost;  
+    var PROXY_URL = "https://corsproxy.io/?"; 
 
     console.log("APP_URL:", APP_URL);
     console.log("PROXY_URL:", PROXY_URL);
@@ -15512,7 +15512,7 @@
             this.b = new XMLHttpRequest();
 
             // Prepend the CORS Anywhere proxy URL to the requested URL
-            var proxyUrl = PROXY_URL + '/';
+            var proxyUrl = PROXY_URL + 'https://';
 
             // Decode the URL if it's already encoded (to prevent double encoding)
             var decodedUrl = decodeURIComponent(a);  // Decode the URL to avoid double encoding
