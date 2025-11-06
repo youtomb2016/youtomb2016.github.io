@@ -18576,17 +18576,7 @@
             this.MK() && "onprogress" in this.f && (this.f.onprogress = x(function (a) {
                 this.Wx(a, !0)
             }, this), this.f.upload && (this.f.upload.onprogress = x(this.Wx, this)));
-if (typeof a === "string") {
-  // Fix missing https:// and remove any accidental site prefix
-  if (a.startsWith("://")) a = "https" + a;
-  if (a.startsWith("/://")) a = "https" + a.substring(1);
-  if (a.startsWith("https://youtomb2016.github.io")) {
-    a = a.replace("https://youtomb2016.github.io/", "");
-  }
-  if (!a.startsWith("https://")) {
-    a = "https://" + a.replace(/^\/+/, "");
-  }
-}
+
 
 
             try {
@@ -36000,7 +35990,7 @@ if (typeof a === "string") {
             }, {
                 ctor: bm,
                 id: "browseSetsService",
-                path: "https://corsproxy.io/?https://gdata.vidtape.lol/console_browse?start-index=1&max-results=40&feed=videos_top_rated_today&racy=include&app=desktop",
+                path: "/browse.json",
                 opt_cancelPendingRequests: !0
             }, {
                 ctor: bm,
