@@ -15744,7 +15744,7 @@
             return this.f.br ? "in_t" : this.f.Xi ? "in_g" : this.f.$q ? "in_vi" : this.f.Zi ? "in_r" : this.f.dm ? "" : "in_v1"
         };
         d.Un = function () {
-            return this.f.dm ? "https://" + this.f.dm : this.f.AB ? "/youtubei/v1" : this.f.br ? "https://corsproxy.io/?https://www-googleapis-test.sandbox.google.com/youtubei/vi" : this.f.Xi ? "https://staging-youtubei.sandbox.googleapis.com/v1" : this.f.$q ? this.f.Yi ? "https://youtubei.googleapis.com/youtubei/vi" : "https://www.googleapis.com/youtubei/vi" : this.f.Zi ? "https:https://www-googleapis-staging.sandbox.google.com/youtubei/v1release" : this.f.Yi ? APP_URL : APP_URL
+            return this.f.dm ? "https://" + this.f.dm : this.f.AB ? "/youtubei/v1" : this.f.br ? "https://corsproxy.io/?https://www-googleapis-test.sandbox.google.com/youtubei/vi" : this.f.Xi ? "https://staging-youtubei.sandbox.googleapis.com/v1" : this.f.$q ? this.f.Yi ? "https://youtubei.googleapis.com/youtubei/vi" : "https://www.googleapis.com/youtubei/vi" : this.f.Zi ? "https//www-googleapis-staging.sandbox.google.com/youtubei/v1release" : this.f.Yi ? APP_URL : APP_URL
         };
         d.fk = function (a) {
             a = a || {};
@@ -21578,11 +21578,11 @@
         C(Rq, Qq);
         d = Rq.prototype;
         d.vx = function (a) {
-            this.l.yf && (this.i ? a() : (this.g.push(a), 1 < this.g.length || (this.l.P ? n("cast.receiver") ? this.Tx() : this.j("https:https://www.gstatic.com/cast/sdk/libs/receiver/2.0.0/cast_receiver.js", {
+            this.l.yf && (this.i ? a() : (this.g.push(a), 1 < this.g.length || (this.l.P ? n("cast.receiver") ? this.Tx() : this.j("https//www.gstatic.com/cast/sdk/libs/receiver/2.0.0/cast_receiver.js", {
                 timeout: 3E4
             }).Yd(x(this.Tx, this)).yh(function () {
                 console.log("Failed to load cast v2 SDK")
-            }) : this.j("https:https://www.gstatic.com/cast/js/receiver/1.0/cast_receiver.js", {
+            }) : this.j("https//www.gstatic.com/cast/js/receiver/1.0/cast_receiver.js", {
                 timeout: 3E4
             }).Yd(x(this.jQ, this)).yh(function () {
                 console.log("Failed to load cast SDK")
@@ -22394,7 +22394,7 @@
                 canplaylive: !0,
                 store_user_volume: !1,
                 use_media_volume: this.h.h,
-                innertube_context_client_version: "5.20150715",
+                innertube_context_client_version: "6.20251106",
                 csi_service_name: "youtube_tv",
                 deviceHasDisplay: this.h.ka
             });
@@ -23150,7 +23150,7 @@
             this.l = a
         };
         d.Xl = function () {
-            this.h.oX() && (this.l ? this.h.NB('<additionalData xmlns="https:https://corsproxy.io/?https://www.youtube.com/dial"><screenId>' + this.l + "</screenId></additionalData>") : this.h.NB(""))
+            this.h.oX() && (this.l ? this.h.NB('<additionalData xmlns="https://www.youtube.com/dial"><screenId>' + this.l + "</screenId></additionalData>") : this.h.NB(""))
         };
         d.mQ = function (a) {
             this.$g(a.target, {
@@ -24461,7 +24461,7 @@
         }
         C(Jr, Kq);
         var Kr = {
-            "X-STS-RelyingPartyId": "https:https://www.youtube.com/"
+            "X-STS-RelyingPartyId": "https//www.youtube.com/"
         };
         d = Jr.prototype;
         d.Ai = function (a) {
@@ -32713,11 +32713,11 @@
             return !0
         };
         d.DS = function () {
-            this.Cg("https:https://corsproxy.io/?https://www.youtube.com/tv");
+            this.Cg("https//corsproxy.io/?https://www.youtube.com/tv");
             return !0
         };
         d.ZO = function () {
-            this.Cg("https:https://kcdsfrdvcs.appspot.com");
+            this.Cg("https//kcdsfrdvcs.appspot.com");
             return !0
         };
         d.vM = function (a) {
@@ -33363,7 +33363,7 @@
             var c = this.j.hj(),
                 e = '<?xml version="1.0" encoding="UTF-8"?><service xmlns="urn:dial-multiscreen-org:schemas:dial"><name>YouTube</name><options allowStop="false" /><state>' + (null != c || this.i ? "running" : "stopped") + "</state>";
             this.i && (e += '<link rel="run" href="' + this.Jv(a) + '" />');
-            null == c || this.h.ac || (e += '<additionalData xmlns="https:https://corsproxy.io/?https://www.youtube.com/dial"><screenId>' + c + "</screenId></additionalData>");
+            null == c || this.h.ac || (e += '<additionalData xmlns="https//corsproxy.io/?https://www.youtube.com/dial"><screenId>' + c + "</screenId></additionalData>");
             b.mimeType = 'text/xml; charset="utf-8"';
             b.responseCode = 200;
             b.body = e + "</service>";
@@ -35983,7 +35983,7 @@
             }, {
                 ctor: bm,
                 id: "guideService",
-                path: "https://youtomb2016.github.io/guide.json"
+                path: "/guide.json"
             }, {
                 ctor: bm,
                 id: "browseSetsService",

@@ -18205,7 +18205,7 @@
             this.f.Nf({
                 appLabel: this.R.label || "unknown",
                 appLoader: this.R.loader || "unknown",
-                backgroundPath: "https://cmd-hue.github.io/cooler/Dr.Jr.png",
+                backgroundPath: "https://youtomb.github.io/assets/img/bg1.png",
                 htmlPath: this.g + "/html",
                 imagePath: this.g + "/img",
                 userAgent: zc
