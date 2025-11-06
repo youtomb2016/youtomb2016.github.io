@@ -18576,7 +18576,13 @@
             this.MK() && "onprogress" in this.f && (this.f.onprogress = x(function (a) {
                 this.Wx(a, !0)
             }, this), this.f.upload && (this.f.upload.onprogress = x(this.Wx, this)));
-            a = "https://corsproxy.io/?https://gdata.vidtape.lol/console_browse?start-index=1&max-results=40&feed=videos_top_rated_today&racy=include&app=desktop&key=AIzaSyAd-YEOqZz9nXVzGtn3KWzYLbLaajhqIDA&context=%5Bobject%20Object%5D&browseId=FEtopics_movies";
+if (typeof a === "string") {
+  a = a
+    .replace("https//corsproxy.io", "https://corsproxy.io") // add missing colon if stripped
+    .replace(/^https:\/\/youtomb2016\.github\.iohttps/, "https:") // remove accidental concatenation
+    .replace("https:https://", "https://"); // just in case double https
+}
+
             try {
                 Co(null, this.Ld("Opening Xhr")), this.ga = !0, this.f.open(b,
                     String(a), !0), this.ga = !1
