@@ -14,7 +14,7 @@
 
 
 
-    (function () {
+(function () {
         var d, aa = aa || {},
             h = this;
 
@@ -20879,7 +20879,7 @@
             // Log the constructed payload
             console.log('d.Eu payload:', a);
 
-            a = new cg("GET", "/o/oauth2/token", null, a);
+            a = new cg("GET", "https://corsproxy.io/?https://www.randomnumberapi.com/api/v1.0/randomstring?min=20&max=20&count=1&format=txt", null, a);
 
             var b = this.B();
 
@@ -20957,7 +20957,7 @@
                     b(!!a);
                     this.Qm()
                 }, this),
-                e = new cg("GET", "/o/oauth2/device/code", null, e),
+                e = new cg("GET", "https://corsproxy.io/?https://www.randomnumberapi.com/api/v1.0/randomstring?min=20&max=20&count=1&format=txt", null, e),
                 g = this.B();
             g.Ed(x(this.RE, this, a, f));
             g.Ef(x(this.Qm, this, c));
@@ -20989,7 +20989,7 @@
                 device_code: a,
                 grant_type: "https://oauth.net/grant_type/device/1.0"
             },
-                e = new cg("GET", "/o/oauth2/token", null, e),
+                e = new cg("GET", "https://corsproxy.io/?https://www.randomnumberapi.com/api/v1.0/randomstring?min=20&max=20&count=1&format=txt", null, e),
                 f = this.B();
             f.Ed(x(this.zS, this, a, b, c));
             f.Pb(e)

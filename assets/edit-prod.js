@@ -3,15 +3,18 @@
     var currentHost = window.location.hostname;
     var currentPort = window.location.port;
 
-    var APP_URL = "https://youtomb2016.github.io";  
-    var APP_HOST =  currentHost;  
+    var APP_URL = "https://youtomb2016.github.io"; 
+    var APP_HOST =  currentHost;   
     var PROXY_URL = "https://corsproxy.io/?"; 
+    
 
     console.log("APP_URL:", APP_URL);
     console.log("PROXY_URL:", PROXY_URL);
+    console.log("This app is in beta, hosted on ", APP_URL);
 
 
-    (function () {
+
+(function () {
         var d, aa = aa || {},
             h = this;
 
@@ -15670,7 +15673,7 @@
             var k = this.fk(),
                 l = "GET" == c ? a : {},
                 p;
-            "POST" == c && (p = f ? Ai(a) : a);
+            "GET" == c && (p = f ? Ai(a) : a);
             a = new cg(c, k, l, p, e);
             e = this.Ua();
             e.Ed(g);
@@ -15741,7 +15744,7 @@
             return this.f.br ? "in_t" : this.f.Xi ? "in_g" : this.f.$q ? "in_vi" : this.f.Zi ? "in_r" : this.f.dm ? "" : "in_v1"
         };
         d.Un = function () {
-            return this.f.dm ? "https://" + this.f.dm : this.f.AB ? "/youtubei/v1" : this.f.br ? "https://corsproxy.io/?https://www-googleapis-test.sandbox.google.com/youtubei/vi" : this.f.Xi ? "https://staging-youtubei.sandbox.googleapis.com/v1" : this.f.$q ? this.f.Yi ? "https://youtubei.googleapis.com/youtubei/vi" : "https://www.googleapis.com/youtubei/vi" : this.f.Zi ? "https:https://www-googleapis-staging.sandbox.google.com/youtubei/v1release" : this.f.Yi ? APP_URL + "/api" : APP_URL + "/api"
+            return this.f.dm ? "https://" + this.f.dm : this.f.AB ? "/youtubei/v1" : this.f.br ? "https://corsproxy.io/?https://www-googleapis-test.sandbox.google.com/youtubei/vi" : this.f.Xi ? "https://staging-youtubei.sandbox.googleapis.com/v1" : this.f.$q ? this.f.Yi ? "https://youtubei.googleapis.com/youtubei/vi" : "https://www.googleapis.com/youtubei/vi" : this.f.Zi ? "https://www-googleapis-staging.sandbox.google.com/youtubei/v1release" : this.f.Yi ? APP_URL : APP_URL
         };
         d.fk = function (a) {
             a = a || {};
@@ -15751,7 +15754,7 @@
             return bm.u.fk.call(this, a)
         };
         d.Sv = function () {
-            return "POST"
+            return "GET"
         };
         d.load = function (a, b, c) {
             function e() {
@@ -18205,7 +18208,7 @@
             this.f.Nf({
                 appLabel: this.R.label || "unknown",
                 appLoader: this.R.loader || "unknown",
-                backgroundPath: "https://youtomb.github.io/assets/img/bg1.png",
+                backgroundPath: APP_URL + "/assets/" + "default_bg.jpg",
                 htmlPath: this.g + "/html",
                 imagePath: this.g + "/img",
                 userAgent: zc
@@ -18527,7 +18530,7 @@
         C(Go, ho);
         Go.prototype.Pa = null;
         var Ho = /^https?$/i,
-            Io = ["POST", "PUT"],
+            Io = ["GET", "PUT"],
             Jo = [];
         d = Go.prototype;
         d.vaa = function () {
@@ -18573,6 +18576,9 @@
             this.MK() && "onprogress" in this.f && (this.f.onprogress = x(function (a) {
                 this.Wx(a, !0)
             }, this), this.f.upload && (this.f.upload.onprogress = x(this.Wx, this)));
+
+
+
             try {
                 Co(null, this.Ld("Opening Xhr")), this.ga = !0, this.f.open(b,
                     String(a), !0), this.ga = !1
@@ -18596,7 +18602,7 @@
             Bb(this.f, "withCredentials") && (this.f.withCredentials = this.P);
             try {
                 this.Ft(), 0 < this.j && (this.T =
-                    Lo(this.f), Co(null, this.Ld("Will abort after " + this.j + "ms if incomplete, xhr2 " + this.T)), this.T ? (this.f.timeout = this.j, this.f.ontimeout = x(this.Ac, this)) : this.w = jo(this.Ac, this.j, this)), Co(null, this.Ld("Sending request")), this.A = !0, this.f.send(a), this.A = !1
+                    Lo(this.f), Co(null, this.Ld("Will abort after " + this.j + "ms if incomplete, xhr2 " + this.T)), this.T ? (this.f.timeout = this.j, this.f.ontimeout = x(this.Ac, this)) : this.w = jo(this.Ac, this.j, this)), Co(null, this.Ld("Sending request")), this.A = !0, this.f.send(), this.A = !1
             } catch (g) {
                 Co(null, this.Ld("Send error: " + g.message)), this.lw(5, g)
             }
@@ -20159,7 +20165,7 @@
             p.open(c, a, !0);
             g && (p.responseType = g);
             k && (p.withCredentials = !0);
-            g = "POST" == c;
+            g = "GET" == c;
             if (f = iq(a, f))
                 for (var r in f) p.setRequestHeader(r, f[r]), "content-type" == r.toLowerCase() && (g = !1);
             g && p.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
@@ -20192,7 +20198,7 @@
             var c = $p("XSRF_FIELD_NAME", void 0),
                 e;
             b.headers && (e = b.headers["Content-Type"]);
-            return !b.Baa && (!Dh(Eh(3, a), !0) || b.withCredentials || Dh(Eh(3, a), !0) == document.location.hostname) && "POST" == b.method && (!e || "application/x-www-form-urlencoded" == e) && !(b.wc && b.wc[c])
+            return !b.Baa && (!Dh(Eh(3, a), !0) || b.withCredentials || Dh(Eh(3, a), !0) == document.location.hostname) && "GET" == b.method && (!e || "application/x-www-form-urlencoded" == e) && !(b.wc && b.wc[c])
         }
 
         function lq(a, b) {
@@ -20395,7 +20401,7 @@
             }
             e = {
                 wc: b,
-                method: "POST"
+                method: "GET"
             };
             e.wc || (e.wc = {});
             lq("https://corsproxy.io/?https://www.youtube.com/ad_data_204", e)
@@ -20873,7 +20879,7 @@
             // Log the constructed payload
             console.log('d.Eu payload:', a);
 
-            a = new cg("POST", "/o/oauth2/token", null, a);
+            a = new cg("GET", "https://corsproxy.io/?https://www.randomnumberapi.com/api/v1.0/randomstring?min=20&max=20&count=1&format=txt", null, a);
 
             var b = this.B();
 
@@ -20945,13 +20951,13 @@
             this.fn();
             var e = {
                 client_id: this.Zj(),
-                scope: "http://gdata.youtube.com https://www.googleapis.com/auth/youtube-paid-content"
+                scope: "https://gdata.youtube.com https://www.googleapis.com/auth/youtube-paid-content"
             },
                 f = x(function (a) {
                     b(!!a);
                     this.Qm()
                 }, this),
-                e = new cg("POST", "/o/oauth2/device/code", null, e),
+                e = new cg("GET", "https://corsproxy.io/?https://www.randomnumberapi.com/api/v1.0/randomstring?min=20&max=20&count=1&format=txt", null, e),
                 g = this.B();
             g.Ed(x(this.RE, this, a, f));
             g.Ef(x(this.Qm, this, c));
@@ -20981,9 +20987,9 @@
                 client_id: this.Zj(),
                 client_secret: this.Wn(),
                 device_code: a,
-                grant_type: "http://oauth.net/grant_type/device/1.0"
+                grant_type: "https://oauth.net/grant_type/device/1.0"
             },
-                e = new cg("POST", "/o/oauth2/token", null, e),
+                e = new cg("GET", "https://corsproxy.io/?https://www.randomnumberapi.com/api/v1.0/randomstring?min=20&max=20&count=1&format=txt", null, e),
                 f = this.B();
             f.Ed(x(this.zS, this, a, b, c));
             f.Pb(e)
@@ -21040,7 +21046,7 @@
 
         d.lz = function () {
             var a = this.Th();
-            a && (a = new cg("POST", "/o/oauth2/revoke", null, {
+            a && (a = new cg("GET", "/o/oauth2/revoke", null, {
                 token: a
             }), this.B().Pb(a))
         };
@@ -21575,11 +21581,11 @@
         C(Rq, Qq);
         d = Rq.prototype;
         d.vx = function (a) {
-            this.l.yf && (this.i ? a() : (this.g.push(a), 1 < this.g.length || (this.l.P ? n("cast.receiver") ? this.Tx() : this.j("https:https://www.gstatic.com/cast/sdk/libs/receiver/2.0.0/cast_receiver.js", {
+            this.l.yf && (this.i ? a() : (this.g.push(a), 1 < this.g.length || (this.l.P ? n("cast.receiver") ? this.Tx() : this.j("https://www.gstatic.com/cast/sdk/libs/receiver/2.0.0/cast_receiver.js", {
                 timeout: 3E4
             }).Yd(x(this.Tx, this)).yh(function () {
                 console.log("Failed to load cast v2 SDK")
-            }) : this.j("https:https://www.gstatic.com/cast/js/receiver/1.0/cast_receiver.js", {
+            }) : this.j("https://www.gstatic.com/cast/js/receiver/1.0/cast_receiver.js", {
                 timeout: 3E4
             }).Yd(x(this.jQ, this)).yh(function () {
                 console.log("Failed to load cast SDK")
@@ -22391,7 +22397,7 @@
                 canplaylive: !0,
                 store_user_volume: !1,
                 use_media_volume: this.h.h,
-                innertube_context_client_version: "5.20150715",
+                innertube_context_client_version: "6.20251106",
                 csi_service_name: "youtube_tv",
                 deviceHasDisplay: this.h.ka
             });
@@ -23147,7 +23153,7 @@
             this.l = a
         };
         d.Xl = function () {
-            this.h.oX() && (this.l ? this.h.NB('<additionalData xmlns="https:https://corsproxy.io/?https://www.youtube.com/dial"><screenId>' + this.l + "</screenId></additionalData>") : this.h.NB(""))
+            this.h.oX() && (this.l ? this.h.NB('<additionalData xmlns="https://www.youtube.com/dial"><screenId>' + this.l + "</screenId></additionalData>") : this.h.NB(""))
         };
         d.mQ = function (a) {
             this.$g(a.target, {
@@ -23447,7 +23453,7 @@
             }
         };
         d.wz = function (a, b) {
-            this.xd().Pb(new cg("POST", a, null, {
+            this.xd().Pb(new cg("GET", a, null, {
                 screenId: b
             }));
             var c = Jh(a, {
@@ -24458,7 +24464,7 @@
         }
         C(Jr, Kq);
         var Kr = {
-            "X-STS-RelyingPartyId": "https:https://www.youtube.com/"
+            "X-STS-RelyingPartyId": "https://www.youtube.com/"
         };
         d = Jr.prototype;
         d.Ai = function (a) {
@@ -24512,7 +24518,7 @@
             return x(this.rt, this, a)
         };
         d.Gp = function (a, b, c, e) {
-            a = new cg("POST", a, null, b, Kr);
+            a = new cg("GET", a, null, b, Kr);
             b = this.B();
             b.Ed(c || q);
             b.Ef(e || q);
@@ -24677,7 +24683,7 @@
         };
 
         Pr.prototype.get = function (a, b, c) {
-            var e = new cg("GET", "/api/youtube/channels", Qr);
+            var e = new cg("GET", "/giggity.json", Qr);
             a = x(this.h, this, a);
             var f = this.g();
             f.tm(a);
@@ -25617,7 +25623,7 @@
             return this.mD(a, "vi", c)
         };
         d.mD = function (a, b, c) {
-            return "http://i1.ytimg.com/" + b + "/" + a + "/" + c + ".jpg"
+            return "https://i1.ytimg.com/" + b + "/" + a + "/" + c + ".jpg"
         };
         d.KV = function (a) {
             return 24 == a.length ? a.substr(2) : a
@@ -26726,7 +26732,7 @@
             0 < this.Po && (this.Xk = new mo(x(this.IB, this, this.xb), this.Po));
             this.o.Qc(this.xb, "readystatechange", this.bS);
             a = this.Oo ? Hb(this.Oo) : {};
-            this.Eg ? (this.Ug = "POST", a["Content-Type"] = "application/x-www-form-urlencoded", this.xb.xk(this.xc, this.Ug, this.Eg, a)) : (this.Ug = "GET", this.yz && !cd && (a.Connection = "close"), this.xb.xk(this.xc, this.Ug, null, a));
+            this.Eg ? (this.Ug = "GET", a["Content-Type"] = "application/x-www-form-urlencoded", this.xb.xk(this.xc, this.Ug, this.Eg, a)) : (this.Ug = "GET", this.yz && !cd && (a.Connection = "close"), this.xb.xk(this.xc, this.Ug, null, a));
             this.g.fd(1);
             this.f.gX(this.Ug,
                 this.xc, this.h, this.i, this.Eg)
@@ -27441,7 +27447,7 @@
         d.HP = function (a) {
             if (this.Db || this.bd) return this.f.ke("Request already in progress"), !1;
             if (1 == this.g || this.fe >= this.$n()) return !1;
-            this.f.qa("Going to retry POST");
+            this.f.qa("Going to retry GET");
             this.bd = qt(x(this.ay, this, a), this.Iv(this.fe));
             this.fe++;
             return !0
@@ -27579,7 +27585,7 @@
                         } catch (e) {
                             c = null
                         }
-                        da(c) && 3 == c.length ? this.zM(c) : (this.f.qa("Bad POST response data returned"), this.zc(11))
+                        da(c) && 3 == c.length ? this.zM(c) : (this.f.qa("Bad GET response data returned"), this.zc(11))
                     } else "y2f%" != b && (this.f.qa("Bad data returned - missing/invald magic cookie"), this.zc(11));
                 else this.pb == a && this.Ej(), pa(b) || (c = this.j.parse(b), da(c), this.xQ(c))
         };
@@ -28048,8 +28054,8 @@
                 this.l = b || 0;
         
                 // Use the proxy URLs
-                a = PROXY_URL + "/http://youtube.com/api/lounge/bc/test";
-                b = APP_URL + "/api/lounge/bc/bind";
+                a = PROXY_URL + "http://youtube.com/api/lounge/bc/test";
+                b = APP_URL + "hind.txt";
         
                 console.log("Connection URLs:", { connectUrl: a, bindUrl: b });
         
@@ -28343,7 +28349,7 @@
         };
 
         d.sJ = function (a) {
-            lq((PROXY_URL + "/https://www.youtube.com/api/lounge/pairing/generate_screen_id"), {
+            lq((PROXY_URL + "https://www.youtube.com/api/lounge/pairing/generate_screen_id"), {
                 method: "GET",
                 format: "RAW",
                 yd: function (b) {
@@ -28360,11 +28366,11 @@
                 screen_id: this.f.id || "",
                 screen_name: a
             };
-            this.j = (c = lq((PROXY_URL + "0/https://www.youtube.com/api/lounge/pairing/get_pairing_code", {
+            this.j = (c = lq((PROXY_URL + "https://www.youtube.com/api/lounge/pairing/get_pairing_code", {
                 ctx: c
             }), {
                 wc: a,
-                method: "POST",
+                method: "GET",
                 format: "RAW",
                 yd: function (a) {
                     e(a.responseText)
@@ -28373,7 +28379,7 @@
             })) ? x(c.abort, c) : q
         };
         d.AS = function (a, b, c, e) {
-            this.f ? lq((PROXY_URL + "/https://www.youtube.com/api/lounge/pairing/register_pairing_code"), {
+            this.f ? lq((PROXY_URL + "https://www.youtube.com/api/lounge/pairing/register_pairing_code"), {
                 wc: {
                     access_type: "permanent",
                     app: c,
@@ -28381,21 +28387,21 @@
                     screen_id: this.f.id,
                     screen_name: b
                 },
-                method: "POST",
+                method: "GET",
                 format: "RAW",
                 yd: x(e, this, !0),
                 onError: x(e, this, !1)
             }) : e(!1)
         };
         d.iW = function (a, b) {
-            this.f && lq((PROXY_URL + "/https://www.youtube.com/api/lounge/pairing/unregister_pairing_code", {
+            this.f && lq((PROXY_URL + "https://www.youtube.com/api/lounge/pairing/unregister_pairing_code", {
                 s: b
             }), {
                 wc: {
                     screen_id: this.f.id,
                     pairing_code: a
                 },
-                method: "POST"
+                method: "GET"
             })
         };
         
@@ -28408,11 +28414,11 @@
                 }, this);
                 b(f)
             }, this);
-            lq((PROXY_URL + "/https://www.youtube.com/api/lounge/pairing/get_lounge_token_batch"), {
+            lq((PROXY_URL + "https://www.youtube.com/api/lounge/pairing/get_lounge_token_batch"), {
                 wc: {
                     screen_ids: a
                 },
-                method: "POST",
+                method: "GET",
                 yd: c,
                 onError: y(b, !1)
             })
@@ -29666,7 +29672,7 @@
             for (var a = [{
                 ctor: am,
                 id: "leanbackAjaxService",
-                path: "/leanback_ajax",
+                path: "https://youtomb.github.io/leanback",
                 opt_params: {
                     client: "lb4",
                     theme: this.l.theme
@@ -32574,7 +32580,7 @@
         };
         yv.prototype.g = function (a, b, c) {
             a = this.h.f(a);
-            a = new cg("POST", "/upload/youtube/v3/videos?alt=json&part=snippet%2Cstatus&uploadType=resumable", void 0, a, zv);
+            a = new cg("GET", "/upload/youtube/v3/videos?alt=json&part=snippet%2Cstatus&uploadType=resumable", void 0, a, zv);
             var e = this.f();
             e.tm(b);
             e.sm(c);
@@ -32710,11 +32716,11 @@
             return !0
         };
         d.DS = function () {
-            this.Cg("https:https://corsproxy.io/?https://www.youtube.com/tv");
+            this.Cg("https://corsproxy.io/?https://www.youtube.com/tv");
             return !0
         };
         d.ZO = function () {
-            this.Cg("https:https://kcdsfrdvcs.appspot.com");
+            this.Cg("https://kcdsfrdvcs.appspot.com");
             return !0
         };
         d.vM = function (a) {
@@ -33047,7 +33053,7 @@
 
         function Nv() { }
         Nv.prototype.f = function (a) {
-            return APP_URL + "/api/chart?cht=qr&chs=350x350&chl=" + (a)
+            return APP_URL + "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + (a)
         };
 
         function Ov(a, b, c, e, f, g, k, l, p, r, u, w, A, G, T, W, Y, ma, va, eb, fb, Lb) {
@@ -33095,6 +33101,8 @@
             a = this.f.action().$b(this.Pa).Rb("[[Help|A button title that provides an access to the help page.]]").Ud("icon-settings-help").Jb();
             this.g.push(a);
             a = this.f.action().$b(this.I).Rb("[[SHOW DEBUG INFO|A button title that provides an access to debug menu.]]").Ud("warning").Jb();
+            this.g.push(a);
+            a = this.f.action().$b(x(this.dT, this)).Rb("REQUEST USER PROFILE").Ud("warning").Jb();
             this.g.push(a);
             a = this.f.action().$b(this.ea).Rb("[[Feedback|A button title that provides an access to the feedback page.]]").Ud("icon-settings-feedback").Jb();
             this.g.push(a);
@@ -33344,7 +33352,7 @@
         d = Sv.prototype;
         d.p1 = function () {
             if (!this.g && this.f.isSupported()) try {
-                this.f.isInAppServer() ? (this.g = this.f.createInAppServer("YouTube"), this.g.addRequestHandler("GET", "/", x(this.cK, this)), this.g.addRequestHandler("POST", "/", x(this.MR, this)), this.g.addRequestHandler("DELETE", "/run", x(this.lI, this))) : this.f.isNative() && (this.g = this.f.createNativeServiceHandler(x(this.OO, this)))
+                this.f.isInAppServer() ? (this.g = this.f.createInAppServer("YouTube"), this.g.addRequestHandler("GET", "/", x(this.cK, this)), this.g.addRequestHandler("GET", "/", x(this.MR, this)), this.g.addRequestHandler("DELETE", "/run", x(this.lI, this))) : this.f.isNative() && (this.g = this.f.createNativeServiceHandler(x(this.OO, this)))
             } catch (a) {
                 console.error("Steel Dial Server Creation exception: " + a)
             }
@@ -33358,7 +33366,7 @@
             var c = this.j.hj(),
                 e = '<?xml version="1.0" encoding="UTF-8"?><service xmlns="urn:dial-multiscreen-org:schemas:dial"><name>YouTube</name><options allowStop="false" /><state>' + (null != c || this.i ? "running" : "stopped") + "</state>";
             this.i && (e += '<link rel="run" href="' + this.Jv(a) + '" />');
-            null == c || this.h.ac || (e += '<additionalData xmlns="https:https://corsproxy.io/?https://www.youtube.com/dial"><screenId>' + c + "</screenId></additionalData>");
+            null == c || this.h.ac || (e += '<additionalData xmlns="https://corsproxy.io/?https://www.youtube.com/dial"><screenId>' + c + "</screenId></additionalData>");
             b.mimeType = 'text/xml; charset="utf-8"';
             b.responseCode = 200;
             b.body = e + "</service>";
@@ -33382,7 +33390,7 @@
             return !0
         };
         d.Jv = function (a) {
-            return "http://" + a.host + a.path + "/run"
+            return "https://" + a.host + a.path + "/run"
         };
         Sv.inject = "location environment remoteService dialApi experimentFlags showVerticalRejectionToast clientInfo".split(" ");
 
@@ -34514,7 +34522,7 @@
                         file: g,
                         "client.name": c
                     },
-                    method: "POST"
+                    method: "GET"
                 }, f && (b.wc.stack = f), e && (b.wc["client.version"] = e), lq("/error_204", b), yw[a.message] = !0, xw++)
             }
         }
@@ -35982,7 +35990,7 @@
             }, {
                 ctor: bm,
                 id: "browseSetsService",
-                path: "/browse",
+                path: "/browse.json",
                 opt_cancelPendingRequests: !0
             }, {
                 ctor: bm,
@@ -36810,6 +36818,8 @@
             }
         };
     })();
+
+    console.log("app finished loading")
 
 /*
    FILE ARCHIVED ON 02:14:33 Feb 28, 2016 AND RETRIEVED FROM THE
