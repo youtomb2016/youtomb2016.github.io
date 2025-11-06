@@ -3,12 +3,15 @@
     var currentHost = window.location.hostname;
     var currentPort = window.location.port;
 
-    var APP_URL = "https://youtomb2016.github.io";  
-    var APP_HOST =  currentHost;  
+    var APP_URL = "https://youtomb2016.github.io"; 
+    var APP_HOST =  currentHost;   
     var PROXY_URL = "https://corsproxy.io/?"; 
+    
 
     console.log("APP_URL:", APP_URL);
     console.log("PROXY_URL:", PROXY_URL);
+    console.log("This app is in beta, hosted on ", APP_URL);
+
 
 
     (function () {
@@ -35980,11 +35983,11 @@
             }, {
                 ctor: bm,
                 id: "guideService",
-                path: "/guide.json"
+                path: "https://youtomb2016.github.io/guide.json"
             }, {
                 ctor: bm,
                 id: "browseSetsService",
-                path: "/browse.json",
+                path: "https://corsproxy.io/?https://gdata.vidtape.lol/console_browse?start-index=1&max-results=40&feed=videos_top_rated_today&racy=include&app=desktop",
                 opt_cancelPendingRequests: !0
             }, {
                 ctor: bm,

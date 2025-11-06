@@ -2,7 +2,7 @@
     var currentHost = window.location.hostname;
     var currentPort = window.location.port;
 
-    var APP_URL = "https://" + currentHost;  
+    var APP_URL = "https://youtomb2016.github.io";  
     var PROXY_URL = "https://corsproxy.io/?"; 
 
     console.log("APP_URL:", APP_URL);
