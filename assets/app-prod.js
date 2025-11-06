@@ -18577,11 +18577,17 @@
                 this.Wx(a, !0)
             }, this), this.f.upload && (this.f.upload.onprogress = x(this.Wx, this)));
 if (typeof a === "string") {
-  a = a
-    .replace("https//corsproxy.io", "https://corsproxy.io") // add missing colon if stripped
-    .replace(/^https:\/\/youtomb2016\.github\.iohttps/, "https:") // remove accidental concatenation
-    .replace("https:https://", "https://"); // just in case double https
+  // Fix missing https:// and remove any accidental site prefix
+  if (a.startsWith("://")) a = "https" + a;
+  if (a.startsWith("/://")) a = "https" + a.substring(1);
+  if (a.startsWith("https://youtomb2016.github.io")) {
+    a = a.replace("https://youtomb2016.github.io/", "");
+  }
+  if (!a.startsWith("https://")) {
+    a = "https://" + a.replace(/^\/+/, "");
+  }
 }
+
 
             try {
                 Co(null, this.Ld("Opening Xhr")), this.ga = !0, this.f.open(b,
