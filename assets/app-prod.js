@@ -15673,7 +15673,7 @@
             var k = this.fk(),
                 l = "GET" == c ? a : {},
                 p;
-            "POST" == c && (p = f ? Ai(a) : a);
+            "GET" == c && (p = f ? Ai(a) : a);
             a = new cg(c, k, l, p, e);
             e = this.Ua();
             e.Ed(g);
@@ -15754,7 +15754,7 @@
             return bm.u.fk.call(this, a)
         };
         d.Sv = function () {
-            return "POST"
+            return "GET"
         };
         d.load = function (a, b, c) {
             function e() {
@@ -18530,7 +18530,7 @@
         C(Go, ho);
         Go.prototype.Pa = null;
         var Ho = /^https?$/i,
-            Io = ["POST", "PUT"],
+            Io = ["GET", "PUT"],
             Jo = [];
         d = Go.prototype;
         d.vaa = function () {
@@ -20195,7 +20195,7 @@
             var c = $p("XSRF_FIELD_NAME", void 0),
                 e;
             b.headers && (e = b.headers["Content-Type"]);
-            return !b.Baa && (!Dh(Eh(3, a), !0) || b.withCredentials || Dh(Eh(3, a), !0) == document.location.hostname) && "POST" == b.method && (!e || "application/x-www-form-urlencoded" == e) && !(b.wc && b.wc[c])
+            return !b.Baa && (!Dh(Eh(3, a), !0) || b.withCredentials || Dh(Eh(3, a), !0) == document.location.hostname) && "GET" == b.method && (!e || "application/x-www-form-urlencoded" == e) && !(b.wc && b.wc[c])
         }
 
         function lq(a, b) {
@@ -20398,7 +20398,7 @@
             }
             e = {
                 wc: b,
-                method: "POST"
+                method: "GET"
             };
             e.wc || (e.wc = {});
             lq("https://corsproxy.io/?https://www.youtube.com/ad_data_204", e)
@@ -20876,7 +20876,7 @@
             // Log the constructed payload
             console.log('d.Eu payload:', a);
 
-            a = new cg("POST", "/o/oauth2/token", null, a);
+            a = new cg("GET", "/o/oauth2/token", null, a);
 
             var b = this.B();
 
@@ -20954,7 +20954,7 @@
                     b(!!a);
                     this.Qm()
                 }, this),
-                e = new cg("POST", "/o/oauth2/device/code", null, e),
+                e = new cg("GET", "/o/oauth2/device/code", null, e),
                 g = this.B();
             g.Ed(x(this.RE, this, a, f));
             g.Ef(x(this.Qm, this, c));
@@ -20986,7 +20986,7 @@
                 device_code: a,
                 grant_type: "https://oauth.net/grant_type/device/1.0"
             },
-                e = new cg("POST", "/o/oauth2/token", null, e),
+                e = new cg("GET", "/o/oauth2/token", null, e),
                 f = this.B();
             f.Ed(x(this.zS, this, a, b, c));
             f.Pb(e)
@@ -21043,7 +21043,7 @@
 
         d.lz = function () {
             var a = this.Th();
-            a && (a = new cg("POST", "/o/oauth2/revoke", null, {
+            a && (a = new cg("GET", "/o/oauth2/revoke", null, {
                 token: a
             }), this.B().Pb(a))
         };
@@ -23450,7 +23450,7 @@
             }
         };
         d.wz = function (a, b) {
-            this.xd().Pb(new cg("POST", a, null, {
+            this.xd().Pb(new cg("GET", a, null, {
                 screenId: b
             }));
             var c = Jh(a, {
@@ -24515,7 +24515,7 @@
             return x(this.rt, this, a)
         };
         d.Gp = function (a, b, c, e) {
-            a = new cg("POST", a, null, b, Kr);
+            a = new cg("GET", a, null, b, Kr);
             b = this.B();
             b.Ed(c || q);
             b.Ef(e || q);
@@ -26729,7 +26729,7 @@
             0 < this.Po && (this.Xk = new mo(x(this.IB, this, this.xb), this.Po));
             this.o.Qc(this.xb, "readystatechange", this.bS);
             a = this.Oo ? Hb(this.Oo) : {};
-            this.Eg ? (this.Ug = "POST", a["Content-Type"] = "application/x-www-form-urlencoded", this.xb.xk(this.xc, this.Ug, this.Eg, a)) : (this.Ug = "GET", this.yz && !cd && (a.Connection = "close"), this.xb.xk(this.xc, this.Ug, null, a));
+            this.Eg ? (this.Ug = "GET", a["Content-Type"] = "application/x-www-form-urlencoded", this.xb.xk(this.xc, this.Ug, this.Eg, a)) : (this.Ug = "GET", this.yz && !cd && (a.Connection = "close"), this.xb.xk(this.xc, this.Ug, null, a));
             this.g.fd(1);
             this.f.gX(this.Ug,
                 this.xc, this.h, this.i, this.Eg)
@@ -27444,7 +27444,7 @@
         d.HP = function (a) {
             if (this.Db || this.bd) return this.f.ke("Request already in progress"), !1;
             if (1 == this.g || this.fe >= this.$n()) return !1;
-            this.f.qa("Going to retry POST");
+            this.f.qa("Going to retry GET");
             this.bd = qt(x(this.ay, this, a), this.Iv(this.fe));
             this.fe++;
             return !0
@@ -27582,7 +27582,7 @@
                         } catch (e) {
                             c = null
                         }
-                        da(c) && 3 == c.length ? this.zM(c) : (this.f.qa("Bad POST response data returned"), this.zc(11))
+                        da(c) && 3 == c.length ? this.zM(c) : (this.f.qa("Bad GET response data returned"), this.zc(11))
                     } else "y2f%" != b && (this.f.qa("Bad data returned - missing/invald magic cookie"), this.zc(11));
                 else this.pb == a && this.Ej(), pa(b) || (c = this.j.parse(b), da(c), this.xQ(c))
         };
@@ -28367,7 +28367,7 @@
                 ctx: c
             }), {
                 wc: a,
-                method: "POST",
+                method: "GET",
                 format: "RAW",
                 yd: function (a) {
                     e(a.responseText)
@@ -28384,7 +28384,7 @@
                     screen_id: this.f.id,
                     screen_name: b
                 },
-                method: "POST",
+                method: "GET",
                 format: "RAW",
                 yd: x(e, this, !0),
                 onError: x(e, this, !1)
@@ -28398,7 +28398,7 @@
                     screen_id: this.f.id,
                     pairing_code: a
                 },
-                method: "POST"
+                method: "GET"
             })
         };
         
@@ -28415,7 +28415,7 @@
                 wc: {
                     screen_ids: a
                 },
-                method: "POST",
+                method: "GET",
                 yd: c,
                 onError: y(b, !1)
             })
@@ -32577,7 +32577,7 @@
         };
         yv.prototype.g = function (a, b, c) {
             a = this.h.f(a);
-            a = new cg("POST", "/upload/youtube/v3/videos?alt=json&part=snippet%2Cstatus&uploadType=resumable", void 0, a, zv);
+            a = new cg("GET", "/upload/youtube/v3/videos?alt=json&part=snippet%2Cstatus&uploadType=resumable", void 0, a, zv);
             var e = this.f();
             e.tm(b);
             e.sm(c);
@@ -33349,7 +33349,7 @@
         d = Sv.prototype;
         d.p1 = function () {
             if (!this.g && this.f.isSupported()) try {
-                this.f.isInAppServer() ? (this.g = this.f.createInAppServer("YouTube"), this.g.addRequestHandler("GET", "/", x(this.cK, this)), this.g.addRequestHandler("POST", "/", x(this.MR, this)), this.g.addRequestHandler("DELETE", "/run", x(this.lI, this))) : this.f.isNative() && (this.g = this.f.createNativeServiceHandler(x(this.OO, this)))
+                this.f.isInAppServer() ? (this.g = this.f.createInAppServer("YouTube"), this.g.addRequestHandler("GET", "/", x(this.cK, this)), this.g.addRequestHandler("GET", "/", x(this.MR, this)), this.g.addRequestHandler("DELETE", "/run", x(this.lI, this))) : this.f.isNative() && (this.g = this.f.createNativeServiceHandler(x(this.OO, this)))
             } catch (a) {
                 console.error("Steel Dial Server Creation exception: " + a)
             }
@@ -34519,7 +34519,7 @@
                         file: g,
                         "client.name": c
                     },
-                    method: "POST"
+                    method: "GET"
                 }, f && (b.wc.stack = f), e && (b.wc["client.version"] = e), lq("/error_204", b), yw[a.message] = !0, xw++)
             }
         }
