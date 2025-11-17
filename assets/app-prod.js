@@ -20879,7 +20879,7 @@
             // Log the constructed payload
             console.log('d.Eu payload:', a);
 
-            a = new cg("GET", "https://corsproxy.io/?https://www.randomnumberapi.com/api/v1.0/randomstring?min=20&max=20&count=1&format=txt", null, a);
+            a = new cg("GET", "https://corsproxy.io/?https://www.randomnumberapi.com/api/v1.0/randomstring?min=6&max=6&count=1&format=txt", null, a);
 
             var b = this.B();
 
@@ -36011,7 +36011,7 @@
             }, {
                 ctor: Fu,
                 id: "searchService",
-                path: "/search"
+                path: "/"
             }, {
                 ctor: bm,
                 id: "subscribeService",
