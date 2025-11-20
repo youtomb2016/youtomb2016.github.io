@@ -35940,14 +35940,14 @@
         d.iF = function () {
             var a = {
                 loggedInVisibilityConfig: {
-                    eg: 9,
-                    Mg: 4,
-                    Xg: 4
-                },
-                loggedOutVisibilityConfig: {
                     eg: 11,
                     Mg: 5,
                     Xg: 5
+                },
+                loggedOutVisibilityConfig: {
+                    eg: 9,
+                    Mg: 4,
+                    Xg: 4
                 },
                 opt_animDuration: 50,
                 opt_ease: "linear"
@@ -35986,7 +35986,7 @@
             }, {
                 ctor: bm,
                 id: "guideService",
-                path: "/guide.json"
+                path: "/guide2.json"
             }, {
                 ctor: bm,
                 id: "browseSetsService",

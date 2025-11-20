@@ -194,7 +194,7 @@
             "navigationEndpoint": {
               "clickTrackingParams": "CAIQtSwYACITCIi9u9-6tYsDFVOT5Qcd9Rwwfg==",
               "applicationSettingsEndpoint": {
-                "hack": false
+                "hack": true
               }
             },
             "icon": {

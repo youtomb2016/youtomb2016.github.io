@@ -2427,6 +2427,7 @@ p {
   margin: 20%;
   position: absolute;
   top: 0;
+  display: none !important;
   z-index: 1
 }
 
