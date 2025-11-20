@@ -69,7 +69,7 @@ window.labels = {
         if (window.yt && yt.tv && yt.tv.initializer) {
             yt.tv.initializer(d);
         } else {
-            alert("The Site cannot load, That is all we know.");
+            console.log("debug: " + d)
         }
     };
 
@@ -102,11 +102,11 @@ window.labels = {
         }
     } else if (c) {
         window.CLOSURE_NO_DEPS = true;
-        q("../assets/app-prod.css");
+        q("https://youtomb2016.github.io/assets/app-prod.css");
         n("/app-concat-bundle.js");
     } else {
-        q("../assets/app-prod.css");
-        n("../assets/app-prod.js");
+        q("https://youtomb2016.github.io/assets/app-prod.css");
+        n("https://youtomb2016.github.io/assets/app-prod.js");
     }
 
     window.checkBrokenLabel = function() {
