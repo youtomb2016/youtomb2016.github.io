@@ -1708,12 +1708,19 @@
             return null
         };
 
-        function Bd(a, b, c, e) {
-            a = yd(a).createEvent("Event");
-            a.initEvent(b, c, !0);
-            a.detail = e;
-            return a
-        }
+function Bd(a, b, c, e) {
+    a = yd(a).createEvent("Event");
+    a.initEvent(b, c, !0);
+    a.detail = e;
+
+    // 🔥 REQUIRED FIX: add missing internal event fields
+    a.source = a.target || a.currentTarget || null;
+    a.target = a.target || a.currentTarget || null;
+    a.data = e || {};
+
+    return a;
+}
+
 
         function Cd(a, b, c, e, f) {
             a = Bd(a, b, e);
