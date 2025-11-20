@@ -1708,19 +1708,12 @@
             return null
         };
 
-function Bd(a, b, c, e) {
-    a = yd(a).createEvent("Event");
-    a.initEvent(b, c, !0);
-    a.detail = e;
-
-    // 🔥 REQUIRED FIX: add missing internal event fields
-    a.source = a.target || a.currentTarget || null;
-    a.target = a.target || a.currentTarget || null;
-    a.data = e || {};
-
-    return a;
-}
-
+        function Bd(a, b, c, e) {
+            a = yd(a).createEvent("Event");
+            a.initEvent(b, c, !0);
+            a.detail = e;
+            return a
+        }
 
         function Cd(a, b, c, e, f) {
             a = Bd(a, b, e);
@@ -7848,13 +7841,11 @@ function Bd(a, b, c, e) {
         };
         ji.inject = ["imagePath", "imageCacheService", "startupMonitor"];
 
-function ki(a) {
-    console.log(a || "none taken");
-    this.name = "InflationError";
-    this.message = a || "none taken";
-}
-
-
+        function ki(a) {
+            this.name = "InflationError";
+            this.message = a;
+            this.stack = Error().stack
+        }
         C(ki, Error);
 
         function li(a, b, c, e, f, g, k, l, p, r, u, w, A, G, T, W, Y, ma, va, eb, fb, Lb, bd, tf, uf, vf, wf, xk) {
@@ -20888,7 +20879,7 @@ function ki(a) {
             // Log the constructed payload
             console.log('d.Eu payload:', a);
 
-            a = new cg("GET", "https://corsproxy.io/?https://www.randomnumberapi.com/api/v1.0/randomstring?min=6&max=6&count=1&format=txt", null, a);
+            a = new cg("GET", "https://corsproxy.io/?https://www.randomnumberapi.com/api/v1.0/randomstring?min=20&max=20&count=1&format=txt", null, a);
 
             var b = this.B();
 
