@@ -245,6 +245,85 @@
     </script>
 
 
+<audio id="fail-sound" src="failed.wav"></audio>
+
+<script>
+(function() {
+    const FAIL_SOUND = document.getElementById("fail-sound");
+    const FAIL_IMG = "failed.png";
+    const ERROR_CODES = [401, 403, 405, 500];
+
+    const originalFetch = window.fetch;
+
+    window.fetch = async function(...args) {
+        try {
+            const response = await originalFetch(...args);
+
+            if (ERROR_CODES.includes(response.status)) {
+                playFailSound();
+            }
+
+            return response;
+        } catch (err) {
+            // Network-level error
+            playFailSound();
+            throw err;
+        }
+    };
+
+    document.addEventListener("error", (event) => {
+        const el = event.target;
+
+        if (el.tagName === "IMG") {
+            const img = el;
+
+            setTimeout(() => {
+                img.src = FAIL_IMG;
+            }, 1000);
+
+            playFailSound();
+        }
+    }, true);
+
+    const observer = new MutationObserver(() => {
+        document.querySelectorAll("*").forEach(el => checkBackgroundImage(el));
+    });
+
+    observer.observe(document.documentElement, {
+        childList: true,
+        subtree: true,
+        attributes: true,
+        attributeFilter: ["style", "class"]
+    });
+
+    function checkBackgroundImage(el) {
+        const style = getComputedStyle(el);
+        const bg = style.backgroundImage;
+
+        if (!bg || bg === "none") return;
+
+        const match = bg.match(/url\(["']?(.*?)["']?\)/);
+        if (!match) return;
+
+        const url = match[1];
+
+        const img = new Image();
+        img.onerror = () => {
+            playFailSound();
+            setTimeout(() => {
+                el.style.backgroundImage = `url("${FAIL_IMG}")`;
+            }, 1000);
+        };
+        img.src = url;
+    }
+
+    function playFailSound() {
+        FAIL_SOUND.play().catch(() => {
+            console.warn("Failed to play failed.wav (user interaction may be required)");
+        });
+    }
+})();
+</script>
 
 
 

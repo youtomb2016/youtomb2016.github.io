@@ -215,7 +215,33 @@
                   }
                 ]
               }
+            },
+                "guideSectionRenderer": {
+      "items": [
+        {
+          "guideEntryRenderer": {
+            "navigationEndpoint": {
+              "clickTrackingParams": "CAIQtSwYACITCIi9u9-6tYsDFVOT5Qcd9Rwwfg==",
+              "applicationSettingsEndpoint": {
+                "hack": true
+              }
+            },
+            "icon": {
+              "iconType": "SETTINGS"
+            },
+            "trackingParams": "CAIQtSwYACITCIi9u9-6tYsDFVOT5Qcd9Rwwfg==",
+            "formattedTitle": {
+              "runs": [
+                {
+                  "text": "Settings"
+                }
+              ]
             }
+          }
+        }
+      ],
+      "trackingParams": "CAEQ5isiEwiIvbvfurWLAxVTk-UHHfUcMH4="
+    }
           }
         ],
         "trackingParams": "CAMQ5isYASITCIi9u9-6tYsDFVOT5Qcd9Rwwfg=="
