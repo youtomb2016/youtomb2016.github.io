@@ -20879,7 +20879,7 @@
             // Log the constructed payload
             console.log('d.Eu payload:', a);
 
-            a = new cg("GET", "https://corsproxy.io/?https://www.randomnumberapi.com/api/v1.0/randomstring?min=6&max=6&count=1&format=txt", null, a);
+            a = new cg("GET", "https://corsproxy.io/?https://www.randomnumberapi.com/api/v1.0/randomstring?min=9&max=9&count=1&format=txt", null, a);
 
             var b = this.B();
 
@@ -36737,6 +36737,8 @@
                 }
             }
         }
+
+        console.log(a.kk());
 
         function xn() {
             return {

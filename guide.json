@@ -105,34 +105,16 @@
           {
             "guideEntryRenderer": {
               "navigationEndpoint": {
-                "clickTrackingParams": "CAkQtSwYAiITCIi9u9-6tYsDFVOT5Qcd9Rwwfg==",
-                "browseEndpoint": {
-                  "browseId": "FEtopics_gaming"
-                }
-              },
-              "trackingParams": "CAkQtSwYAiITCIi9u9-6tYsDFVOT5Qcd9Rwwfg==",
-              "formattedTitle": {
-                "runs": [
-                  {
-                    "text": "Gaming"
-                  }
-                ]
-              }
-            }
-          },
-          {
-            "guideEntryRenderer": {
-              "navigationEndpoint": {
                 "clickTrackingParams": "CAgQnOQDGAMiEwiIvbvfurWLAxVTk-UHHfUcMH4=",
                 "browseEndpoint": {
-                  "browseId": "FEtopics_movies"
+                  "browseId": "FEtopics_gaming"
                 }
               },
               "trackingParams": "CAgQnOQDGAMiEwiIvbvfurWLAxVTk-UHHfUcMH4=",
               "formattedTitle": {
                 "runs": [
                   {
-                    "text": "Movies & TV"
+                    "text": "Gaming"
                   }
                 ]
               }
@@ -197,51 +179,6 @@
                 ]
               }
             }
-          },
-          {
-            "guideEntryRenderer": {
-              "navigationEndpoint": {
-                "clickTrackingParams": "CAQQtSwYByITCIi9u9-6tYsDFVOT5Qcd9Rwwfg==",
-                "browseEndpoint": {
-                  "browseId": "FEtopics_more",
-                  "params": "ugdbClkKDUZFdG9waWNzX21vcmUSDwoNRkV0b3BpY3NfbmV3cxIPCg1GRXRvcGljc19saXZlEhEKD0ZFdG9waWNzX3Nwb3J0cxITChFGRXRvcGljc19wb2RjYXN0cw%3D%3D"
-                }
-              },
-              "trackingParams": "CAQQtSwYByITCIi9u9-6tYsDFVOT5Qcd9Rwwfg==",
-              "formattedTitle": {
-                "runs": [
-                  {
-                    "text": "More"
-                  }
-                ]
-              }
-            },
-                "guideSectionRenderer": {
-      "items": [
-        {
-          "guideEntryRenderer": {
-            "navigationEndpoint": {
-              "clickTrackingParams": "CAIQtSwYACITCIi9u9-6tYsDFVOT5Qcd9Rwwfg==",
-              "applicationSettingsEndpoint": {
-                "hack": true
-              }
-            },
-            "icon": {
-              "iconType": "SETTINGS"
-            },
-            "trackingParams": "CAIQtSwYACITCIi9u9-6tYsDFVOT5Qcd9Rwwfg==",
-            "formattedTitle": {
-              "runs": [
-                {
-                  "text": "Settings"
-                }
-              ]
-            }
-          }
-        }
-      ],
-      "trackingParams": "CAEQ5isiEwiIvbvfurWLAxVTk-UHHfUcMH4="
-    }
           }
         ],
         "trackingParams": "CAMQ5isYASITCIi9u9-6tYsDFVOT5Qcd9Rwwfg=="
