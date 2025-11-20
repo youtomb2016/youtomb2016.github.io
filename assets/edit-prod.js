@@ -35990,7 +35990,7 @@
             }, {
                 ctor: bm,
                 id: "browseSetsService",
-                path: "/browse.json",
+                path: "/browse2.json",
                 opt_cancelPendingRequests: !0
             }, {
                 ctor: bm,
