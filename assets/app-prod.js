@@ -7841,11 +7841,12 @@
         };
         ji.inject = ["imagePath", "imageCacheService", "startupMonitor"];
 
-        function ki(a) {
-            this.name = "InflationError";
-            this.message = a;
-            this.stack = Error().stack
-        }
+        function ki(a = "Missing source parameter.") {
+    this.name = "InflationError";
+    this.message = a;
+    this.stack = Error().stack;
+}
+
         C(ki, Error);
 
         function li(a, b, c, e, f, g, k, l, p, r, u, w, A, G, T, W, Y, ma, va, eb, fb, Lb, bd, tf, uf, vf, wf, xk) {
