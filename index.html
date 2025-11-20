@@ -251,8 +251,14 @@
 (function() {
     const FAIL_SOUND = document.getElementById("fail-sound");
     const FAIL_IMG = "failed.png";
-    const ERROR_CODES = [401, 403, 405, 500];
+    const ERROR_CODES = [403, 404, 405, 500];
 
+    // Track URLs so each background image is checked only once
+    const checkedURLs = new Set();
+
+    // --------------------------------------------------------
+    // 1. Fetch wrapper
+    // --------------------------------------------------------
     const originalFetch = window.fetch;
 
     window.fetch = async function(...args) {
@@ -260,31 +266,36 @@
             const response = await originalFetch(...args);
 
             if (ERROR_CODES.includes(response.status)) {
-                playFailSound();
+                playFailSoundOnce();
             }
 
             return response;
         } catch (err) {
-            // Network-level error
-            playFailSound();
+            playFailSoundOnce();
             throw err;
         }
     };
 
+    // --------------------------------------------------------
+    // 2. Replace <img> on error (once per element)
+    // --------------------------------------------------------
     document.addEventListener("error", (event) => {
         const el = event.target;
+        if (el.tagName !== "IMG") return;
 
-        if (el.tagName === "IMG") {
-            const img = el;
+        if (el.dataset.failedHandled === "true") return;
+        el.dataset.failedHandled = "true";
 
-            setTimeout(() => {
-                img.src = FAIL_IMG;
-            }, 1000);
+        playFailSoundOnce();
+        setTimeout(() => {
+            el.src = FAIL_IMG;
+        }, 1000);
 
-            playFailSound();
-        }
     }, true);
 
+    // --------------------------------------------------------
+    // 3. Replace failed background images (checked once)
+    // --------------------------------------------------------
     const observer = new MutationObserver(() => {
         document.querySelectorAll("*").forEach(el => checkBackgroundImage(el));
     });
@@ -306,10 +317,14 @@
         if (!match) return;
 
         const url = match[1];
+        if (url === FAIL_IMG) return;
+
+        if (checkedURLs.has(url)) return;
+        checkedURLs.add(url);
 
         const img = new Image();
         img.onerror = () => {
-            playFailSound();
+            playFailSoundOnce();
             setTimeout(() => {
                 el.style.backgroundImage = `url("${FAIL_IMG}")`;
             }, 1000);
@@ -317,10 +332,16 @@
         img.src = url;
     }
 
-    function playFailSound() {
-        FAIL_SOUND.play().catch(() => {
-            console.warn("Failed to play failed.wav (user interaction may be required)");
-        });
+    // --------------------------------------------------------
+    // Sound (only play once every 500ms max)
+    // --------------------------------------------------------
+    let lastPlay = 0;
+    function playFailSoundOnce() {
+        const now = Date.now();
+        if (now - lastPlay < 500) return;
+        lastPlay = now;
+
+        FAIL_SOUND.play().catch(() => {});
     }
 })();
 </script>
