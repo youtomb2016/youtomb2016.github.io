@@ -6013,13 +6013,16 @@
 
         function gn(a) {
             if (a.o) {
+                // REMOVE the untrusted URL check to allow all URLs
+                // if (!fl.test(a.o)) throw Error("Untrusted URL: " + a.o);
+
                 var b = ph(a.o);
                 a.C = b.A;
                 a.B = b.g + (null != b.F ? ":" + b.F : "");
                 var c = b.o;
 
-                if (0 == c.indexOf("m3u8")) {
-                    a.A = "m3u8";
+                if (0 == c.indexOf("/videoplayback")) {
+                    a.A = "/videoplayback";
                     c = c.substr(14);
                 } else if (0 == c.indexOf("/api/manifest/")) {
                     var d = c.indexOf("/", 14);
@@ -9471,7 +9474,7 @@
             b = xs(b);
             if (!b) return [];
             var d = {
-                $E: "https:https://corsproxy.io/?https://youtube.com/api/drm/fps?ek=uninitialized"
+                $E: "https://web.archive.org/web/20160618062316/https://youtube.com/api/drm/fps?ek=uninitialized"
             },
                 e, f = [],
                 h = [],
@@ -9996,11 +9999,11 @@
         g.Wk = function (a, b) {
             if (30 == this.ca) {
                 var c = this.Ba["default.jpg"];
-                return c ? c : this.videoId ? Vg("https://corsproxy.io/?https://docs.google.com/vt", {
+                return c ? c : this.videoId ? Vg("//web.archive.org/web/20160618062316/https://docs.google.com/vt", {
                     id: this.videoId,
                     authuser: this.H,
                     authkey: this.Oa
-                }) : "https://corsproxy.io/?https://docs.google.com/images/doclist/cleardot.gif"
+                }) : "//web.archive.org/web/20160618062316/https://docs.google.com/images/doclist/cleardot.gif"
             }
             b || (b = "hqdefault.jpg");
             return (c = this.Ba[b]) || a.K || "sddefault.jpg" == b || "maxresdefault.jpg" == b ? c : ct(a, this.videoId, b)
@@ -12281,7 +12284,7 @@
             if (b.experiments.b("legacy_autoplay_flag") ? b.D : c.Gc) d.autoplay = "1";
             "heartbeat" == a && (d.tpmt = kv(this.o));
             z(d, b.g);
-            Pv(this, Vg("https://corsproxy.io/?https://www.youtube.com/live_204", d))
+            Pv(this, Vg("//web.archive.org/web/20160618062316/https://www.youtube.com/live_204", d))
         };
         g.T = function () {
             Hv.O.T.call(this);
@@ -17363,13 +17366,13 @@
                     a: switch (b = this.M, a = this.b, c = this.Ba.sb(), d = uv(this.M), a.ca) {
                         case 38:
                             b = a.videoId.indexOf(":");
-                            c = Vg("https://corsproxy.io/?https://play.google.com/books/volumes/" + a.videoId.slice(0, b) + "/content/media", {
+                            c = Vg("//web.archive.org/web/20160618062316/https://play.google.com/books/volumes/" + a.videoId.slice(0, b) + "/content/media", {
                                 aid: a.videoId.slice(b + 1),
                                 sig: a.Fo
                             });
                             break a;
                         case 30:
-                            c = "https://corsproxy.io/?https://docs.google.com/";
+                            c = "//web.archive.org/web/20160618062316/https://docs.google.com/";
                             b.baseYtUrl != ty.prototype.baseYtUrl && (c = b.baseYtUrl);
                             c = Vg(c + "get_video_info", {
                                 docid: a.videoId,
@@ -17379,7 +17382,7 @@
                             });
                             break a;
                         case 33:
-                            c = Vg("https://corsproxy.io/?https://google-liveplayer.appspot.com/get_video_info", {
+                            c = Vg("//web.archive.org/web/20160618062316/https://google-liveplayer.appspot.com/get_video_info", {
                                 key: a.videoId
                             });
                             break a;
@@ -22531,8 +22534,8 @@
         }
 
         function AI(a, b) {
-            var c = Ug("https://corsproxy.io/?https://pagead2.googlesyndication.com/osd/hbe.swf", "id", a.ia);
-            "s" == a.A && (c = "https://corsproxy.io/?https://pagead2.googlesyndication.com/osd/hbts.swf");
+            var c = Ug("//web.archive.org/web/20160618062316/https://pagead2.googlesyndication.com/osd/hbe.swf", "id", a.ia);
+            "s" == a.A && (c = "//web.archive.org/web/20160618062316/https://pagead2.googlesyndication.com/osd/hbts.swf");
             b && (c = Ug(c, "delay", "1"));
             return c
         }
@@ -24137,7 +24140,7 @@
                     d.push("esfm=" + (this.o ? 1 : 0));
                     d.push(b);
                     d.push(CK(c));
-                    uH(W, ("https://corsproxy.io/?https://pagead2.googlesyndication.com/pagead/gen_204?id=lidarvf&" + d.join("&")).substring(0, 2E3), void 0);
+                    uH(W, ("//web.archive.org/web/20160618062316/https://pagead2.googlesyndication.com/pagead/gen_204?id=lidarvf&" + d.join("&")).substring(0, 2E3), void 0);
                     a.Ke = !0
                 }
                 a.oa = !0;
@@ -25045,7 +25048,7 @@
                     a = b.createElement("script");
                     var c = b.location.protocol;
                     "http:" != c && "https:" != c && (c = "");
-                    a.src = c + "https://corsproxy.io/?https://s0.2mdn.net/instream/video/client.js";
+                    a.src = c + "//web.archive.org/web/20160618062316/https://s0.2mdn.net/instream/video/client.js";
                     a.async = !0;
                     a.type = "text/javascript";
                     b = b.getElementsByTagName("script")[0];
@@ -26187,7 +26190,7 @@
         }
 
         function aN() {
-            return iM('<a href="https:https://corsproxy.io/?https://www.google.com/settings/ads/onweb" target="_blank">')
+            return iM('<a href="https://web.archive.org/web/20160618062316/https://www.google.com/settings/ads/onweb" target="_blank">')
         }
 
         function bN(a) {
@@ -26197,7 +26200,7 @@
 
         function cN(a) {
             for (var b = "<ul class='videoAdUiWhyThisAdReasons videoAdUiHideIfEmpty'>", c = a.targetingReasons, d = c.length, e = 0; e < d; e++) b += "<li>" + X(c[e]) + "</li>";
-            b += "</ul><div class='videoAdUiWhyThisAdGenericMessage'>" + X(a.Sh) + "</div><a class='videoAdUiWhyThisAdMute videoAdUiHideIfEmpty'>" + X(a.mute) + "</a><a class='videoAdUiWhyThisAdControl videoAdUiHideIfEmpty' href='https:https://corsproxy.io/?https://www.google.com/settings/ads/onweb' target='_blank'>" + X(a.control) + "</a>";
+            b += "</ul><div class='videoAdUiWhyThisAdGenericMessage'>" + X(a.Sh) + "</div><a class='videoAdUiWhyThisAdMute videoAdUiHideIfEmpty'>" + X(a.mute) + "</a><a class='videoAdUiWhyThisAdControl videoAdUiHideIfEmpty' href='https://web.archive.org/web/20160618062316/https://www.google.com/settings/ads/onweb' target='_blank'>" + X(a.control) + "</a>";
             a = "" + bN({
                 heading: wM("" + X(a.heading)),
                 message: wM(b),
@@ -26764,7 +26767,7 @@
         }
         yN.prototype.C = function (a) {
             var b = a.getOrigin(),
-                c = Mg("https://corsproxy.io/?https://imasdk.googleapis.com"),
+                c = Mg("//web.archive.org/web/20160618062316/https://imasdk.googleapis.com"),
                 b = Mg(b);
             if (c[3] == b[3] && c[4] == b[4])
                 if (null != this.b) wN(this.b, a.b, a.ml, Ff().parent), null != this.b && this.b.send(a);
@@ -26860,7 +26863,7 @@
             this.G = Ua();
             this.C = new Ag;
             var c = this.G,
-                d = (dH() ? "https:" : "http:") + CN("https://corsproxy.io/?https://imasdk.googleapis.com/js/core/bridge0.0.0_%s.html", "en"),
+                d = (dH() ? "https:" : "http:") + CN("//web.archive.org/web/20160618062316/https://imasdk.googleapis.com/js/core/bridge0.0.0_%s.html", "en"),
                 e;
             a: {
                 var f = window;
@@ -29048,7 +29051,7 @@
 
         function MQ(a) {
             var b = VQ(a);
-            return LQ(a, ["402"]) || x(b) && null !== b.match("https://corsproxy.io/?https://s0.2mdn.net/instream/html5/survey/survey.html")
+            return LQ(a, ["402"]) || x(b) && null !== b.match("//web.archive.org/web/20160618062316/https://s0.2mdn.net/instream/html5/survey/survey.html")
         }
 
         function MR(a) {
@@ -29392,7 +29395,7 @@
 
         function gS(a, b, c, d) {
             d = d || {};
-            var e = new Q("https:https://corsproxy.io/?https://ssl.google-analytics.com/collect?v=1&t=timing&tid=UA-68696278-1&utc=" + iS());
+            var e = new Q("https://web.archive.org/web/20160618062316/https://ssl.google-analytics.com/collect?v=1&t=timing&tid=UA-68696278-1&utc=" + iS());
             d.cid = jS(a);
             d.utv = b;
             d.utt = c;
@@ -30925,8 +30928,8 @@
         }
 
         function wU(a) {
-            return '<div class="flash-container ' + (a.Td ? "click-capture" : "") + '">' + (a.Ua ? '<a class="click-layer" target="_blank" href="' + X(a.Ua) + '"></a>' : "") + '<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="https://corsproxy.io/?https://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="' + X(a.width) + '" height="' + X(a.height) + '"><param name="movie" value="' + X(a.url) + '"><param name="quality" value="high"><param name="wmode" value="transparent"><param name="AllowScriptAccess" value="never"><param name="FlashVars" value="clickTAG=' +
-                HM(a.Ua) + '"><embed width="' + X(a.width) + '" height="' + X(a.height) + '" wmode="transparent" type="application/x-shockwave-flash" src="' + X(a.url) + '" allowscriptaccess="never" pluginspage="https://corsproxy.io/?https://www.macromedia.com/go/getflashplayer" flashvars="clickTAG=' + HM(a.Ua) + '"></object></div>'
+            return '<div class="flash-container ' + (a.Td ? "click-capture" : "") + '">' + (a.Ua ? '<a class="click-layer" target="_blank" href="' + X(a.Ua) + '"></a>' : "") + '<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="//web.archive.org/web/20160618062316/https://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="' + X(a.width) + '" height="' + X(a.height) + '"><param name="movie" value="' + X(a.url) + '"><param name="quality" value="high"><param name="wmode" value="transparent"><param name="AllowScriptAccess" value="never"><param name="FlashVars" value="clickTAG=' +
+                HM(a.Ua) + '"><embed width="' + X(a.width) + '" height="' + X(a.height) + '" wmode="transparent" type="application/x-shockwave-flash" src="' + X(a.url) + '" allowscriptaccess="never" pluginspage="//web.archive.org/web/20160618062316/https://www.macromedia.com/go/getflashplayer" flashvars="clickTAG=' + HM(a.Ua) + '"></object></div>'
         }
 
         function xU(a) {
@@ -34449,8 +34452,8 @@
                         d = a.o,
                         e = a.B,
                         f = a.g;
-                    a = "https://corsproxy.io/?https://tpc.googlesyndication.com/sodar/" + encodeURIComponent(c) + ".js";
-                    var h = "https://corsproxy.io/?https://pagead2.googlesyndication.com/bg/" + encodeURIComponent(e) + ".js";
+                    a = "//web.archive.org/web/20160618062316/https://tpc.googlesyndication.com/sodar/" + encodeURIComponent(c) + ".js";
+                    var h = "//web.archive.org/web/20160618062316/https://pagead2.googlesyndication.com/bg/" + encodeURIComponent(e) + ".js";
                     if (c && d && e && f) {
                         var e = window,
                             c = e.document,
@@ -35016,7 +35019,7 @@
             }, f = kf({
                 src: this.J,
                 type: "application/x-shockwave-flash",
-                pluginspage: "https:https://corsproxy.io/?https://www.macromedia.com/go/getflashplayer"
+                pluginspage: "https://web.archive.org/web/20160618062316/https://www.macromedia.com/go/getflashplayer"
             }, {
                 allownetworking: "none",
                 allowscriptaccess: "never"
@@ -35096,7 +35099,7 @@
             this.aa = -1
         }
         B(NY, jY);
-        var OY = $e(Ke(Le("https:https://corsproxy.io/?https://imasdk.googleapis.com/flash/sdkloader/flashinhtml.swf")));
+        var OY = $e(Ke(Le("https://web.archive.org/web/20160618062316/https://imasdk.googleapis.com/flash/sdkloader/flashinhtml.swf")));
         $e(Ke(Le("https://web.archive.org/web/20160618062316/http://imasdk.googleapis.com/flash/sdkloader/flashinhtml.swf")));
         g = NY.prototype;
         g.T = function () {
@@ -36308,7 +36311,7 @@
                 if (MR(b) && !V.b() && !a.A.mg() && c) {
                     var b = a.b.getCurrentTime(),
                         d = a.b.hc(),
-                        e = new Q("https://corsproxy.io/?https://s.youtube.com/s");
+                        e = new Q("//web.archive.org/web/20160618062316/https://s.youtube.com/s");
                     oh(e, "ns", "yt");
                     oh(e, "el", "adunit");
                     oh(e, "docid", c);
@@ -36332,7 +36335,7 @@
                     c = a.o.Rd;
                 if (C(D(b))) b = null;
                 else {
-                    var c = new Q((null != c ? c : "https://corsproxy.io/?https://www.youtube.com/") + "watch"),
+                    var c = new Q((null != c ? c : "//web.archive.org/web/20160618062316/https://www.youtube.com/") + "watch"),
                         d = c.b;
                     d.set("v", b);
                     eh(c, d);
@@ -36476,7 +36479,7 @@
                             k = JQ(c),
                             l = this.o.contentId,
                             m = this.o.Rd,
-                            m = new Q((null != m ? m : "https://corsproxy.io/?https://www.youtube.com/") + "ad_companion"),
+                            m = new Q((null != m ? m : "//web.archive.org/web/20160618062316/https://www.youtube.com/") + "ad_companion"),
                             t = m.b;
                         t.set("adformat", k);
                         t.set("p", h);
@@ -36526,7 +36529,7 @@
                 var c;
                 c = a.o.Rd;
                 b = D(b.channelId);
-                c = C(b) ? null : (null != c ? c : "https://corsproxy.io/?https://www.youtube.com/") + "channel/" + (ta(b, "UC") && 24 == b.length ? b : "UC" + b);
+                c = C(b) ? null : (null != c ? c : "//web.archive.org/web/20160618062316/https://www.youtube.com/") + "channel/" + (ta(b, "UC") && 24 == b.length ? b : "UC" + b);
                 null !== c && (a.b.pause(), hF(c))
             }
         }
@@ -36591,7 +36594,7 @@
             else {
                 a = VQ(Y(this));
                 if (/\.html(\?.*)?$/.test(a)) {
-                    if (a.match("https://corsproxy.io/?https://s0.2mdn.net/instream/html5/survey/survey.html")) {
+                    if (a.match("//web.archive.org/web/20160618062316/https://s0.2mdn.net/instream/html5/survey/survey.html")) {
                         var b = "fr".replace("-", "_");
                         a = a.replace(".html", "_" + b + ".html");
                         null != this.o.contentId && (a = ah(a, "v", this.o.contentId));
@@ -36696,7 +36699,7 @@
                     clickThroughUrl: c,
                     adUrl: d
                 };
-            VQ(Y(a)).match("https://corsproxy.io/?https://s0.2mdn.net/instream/html5/survey/survey.html") && 0 <= b.indexOf("yt_override") && null != a.o.surveyCreativeData && (c.creativeData = a.o.surveyCreativeData);
+            VQ(Y(a)).match("//web.archive.org/web/20160618062316/https://s0.2mdn.net/instream/html5/survey/survey.html") && 0 <= b.indexOf("yt_override") && null != a.o.surveyCreativeData && (c.creativeData = a.o.surveyCreativeData);
             b_(a, "initAd", c);
             E(a.Z, function (a) {
                 b_(this, a.type, a.params)
@@ -39341,7 +39344,7 @@
             y1.call(this, 2, a, b, d)
         }
         B(e2, y1);
-        e2.g = "https:https://corsproxy.io/?https://www.googleapis.com/urlshortener/v1/url?key=AIzaSyBbSB-E7SYd1iggX6r2b5C7ljvO6fVqaj0&shortUrl=";
+        e2.g = "https://web.archive.org/web/20160618062316/https://www.googleapis.com/urlshortener/v1/url?key=AIzaSyBbSB-E7SYd1iggX6r2b5C7ljvO6fVqaj0&shortUrl=";
         e2.o = "43";
         e2.b = function (a) {
             var b = new U1;
@@ -39371,7 +39374,7 @@
         };
         e2.prototype.Cg = function (a, b) {
             var c = this.C;
-            c & 1 || c & 4 || c & 8 ? this.D ? c & 8 ? H0(this.D) : ("goo.gl" == Ng(this.D) ? (c = e2.b("https:https://corsproxy.io/?https://www.googleapis.com/urlshortener/v1/url?key=AIzaSyBbSB-E7SYd1iggX6r2b5C7ljvO6fVqaj0&shortUrl=" + this.D), $1(c, function (a) {
+            c & 1 || c & 4 || c & 8 ? this.D ? c & 8 ? H0(this.D) : ("goo.gl" == Ng(this.D) ? (c = e2.b("https://web.archive.org/web/20160618062316/https://www.googleapis.com/urlshortener/v1/url?key=AIzaSyBbSB-E7SYd1iggX6r2b5C7ljvO6fVqaj0&shortUrl=" + this.D), $1(c, function (a) {
                 a = fg(a.responseText);
                 if (!a) throw Error("Invalid expanded forced ad URL.");
                 if (!a.longUrl) throw Error("Missing forced ad URL information.");
@@ -39559,9 +39562,9 @@
                             flag: "+cmpn"
                         }, d += ej(e, "&") + ";");
                         b = d.substr(0, d.length - 1);
-                        a = "https://corsproxy.io/?https://2975c.v.fwmrm.net/ad/g/1?" + ej(a, "&") + ";" + ej(c, "&") + ";" + b
+                        a = "//web.archive.org/web/20160618062316/https://2975c.v.fwmrm.net/ad/g/1?" + ej(a, "&") + ";" + ej(c, "&") + ";" + b
                     } else e = "10613:10613_youtube_" + b.g.split("_")[0], a.prof = "10613:10613_youtube_" + b.g, a.crtp = "vast2s", a.flag = "+emcr", d = {}, b.D || (d.ptgt = "a", d.slid =
-                        "preroll", d.slau = m2(b), d.w = "480", d.h = "360", d.tpos = "0", d.tpcl = "preroll", d.envp = e, d.cd = "1440,900"), a = "https://corsproxy.io/?https://2975c.v.fwmrm.net/ad/g/1?" + ej(a, "&") + ";" + ej(c, "&") + ";" + ej(d, "&")
+                        "preroll", d.slau = m2(b), d.w = "480", d.h = "360", d.tpos = "0", d.tpcl = "preroll", d.envp = e, d.cd = "1440,900"), a = "//web.archive.org/web/20160618062316/https://2975c.v.fwmrm.net/ad/g/1?" + ej(a, "&") + ";" + ej(c, "&") + ";" + ej(d, "&")
                 } else a = ""
             } else a = this.D;
             return a
@@ -41232,7 +41235,7 @@
                                 if (l) m = l();
                                 else {
                                     if (!jy) {
-                                        var t = Lm("https://corsproxy.io/?https://googleads.g.doubleclick.net/pagead/id", {
+                                        var t = Lm("//web.archive.org/web/20160618062316/https://googleads.g.doubleclick.net/pagead/id", {
                                             format: "RAW",
                                             method: "GET",
                                             timeout: 5E3,
