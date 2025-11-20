@@ -36011,7 +36011,7 @@
             }, {
                 ctor: Fu,
                 id: "searchService",
-                path: "/"
+                path: "/browse2.json"
             }, {
                 ctor: bm,
                 id: "subscribeService",
