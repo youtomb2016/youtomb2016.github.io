@@ -6612,20 +6612,20 @@ p {
 
 
 .game-console.sony .legend-item .icon {
-  background-image: url(/assets/legend-sprite-ps3.png)
+  background-image: url(https://www.gstatic.com/ytlr/img/legend-sprite-ps3.png)
 }
 
 .roku #legend .legend-item .icon {
-  background-image: url(/assets/legend-sprite-roku.png)
+  background-image: url(https://www.gstatic.com/ytlr/img/legend-sprite-roku.png)
 }
 
 .skip-ad-callout .icon,
 .tv .legend-item .icon {
-  background-image: url(/assets/legend-sprite-tv.png)
+  background-image: url(https://www.gstatic.com/ytlr/img/legend-sprite-tv.png)
 }
 
 .wiiu .legend-item .icon {
-  background-image: url(/assets/legend-sprite-wiiu.png)
+  background-image: url(https://www.gstatic.com/ytlr/img/legend-sprite-wiiu.png)
 }
 
 .wiiu #user-info-background {
@@ -6643,11 +6643,11 @@ p {
 }
 
 .xboxone .legend-item .icon {
-  background-image: url(/assets/legend-sprite-xboxone.png)
+  background-image: url(https://www.gstatic.com/ytlr/img/legend-sprite-xboxone.png)
 }
 
 .xbox360 .legend-item .icon {
-  background-image: url(/assets/legend-sprite-xbox360.png)
+  background-image: url(https://www.gstatic.com/ytlr/img/legend-sprite-xbox360.png)
 }
 
 .xbox360 #dialog .login-user-icon {
